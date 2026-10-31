@@ -4,11 +4,12 @@
 
 # IRON CHECK
 
-### A bancada do técnico num programa só.
+### Entregue cada aparelho com laudo, não com promessa.
 
-**Testes, diagnóstico, drivers, overclock seguro e laudo em PDF para notebooks e PCs. Tudo em português, num único arquivo que roda do pendrive.**
+**Testes, diagnóstico, drivers e laudo em PDF para assistências técnicas. Tudo em português, num programa que roda do pendrive.**
 
-[⬇️ Baixar para Windows](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Portatil.exe) ·
+[⬇️ Baixar o kit completo](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Kit.zip) ·
+[💾 Só o programa](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Portatil.exe) ·
 [🌐 Ver o site](https://meowdev-mod.github.io/Iron-Check/) ·
 [💬 Pedir chave de teste](https://wa.me/5521966547296?text=Ol%C3%A1!%20Quero%20uma%20chave%20de%20teste%20do%20Iron%20Check.)
 
@@ -22,9 +23,68 @@
 
 ## 🐺 O que é
 
-O **Iron Check** é um programa para Windows feito para **assistências técnicas e lojas de reparo**. Em um lugar só, ele testa todas as peças do computador, instala drivers, otimiza a máquina, faz overclock seguro, cria pendrive bootável e **emite um relatório em PDF com a ordem de serviço** para você entregar ao cliente e arquivar.
+O **Iron Check** é um programa para Windows feito para **donos de assistência técnica e lojas de reparo**. Num lugar só, ele **testa o computador inteiro**, **instala o driver que falta (o da placa de rede, até sem internet)**, prepara a máquina, cria pendrive bootável e **emite um laudo em PDF com a ordem de serviço** para você entregar ao cliente e arquivar.
 
-Chega de abrir cinco programas diferentes para cada reparo. **Consertou? Agora prove** — com laudo e número de OS.
+Aparelho que volta custa tempo, dinheiro e cliente. O Iron Check foi feito para você parar de entregar na base da promessa: **consertou? Agora prove.**
+
+---
+
+## 😩 Você se reconhece?
+
+- **Cinco programas para um reparo.** Um para ler o hardware, outro para o HD, outro para a memória, um site para o teclado… quase tudo em inglês, e nada fica registrado.
+- **"Foi você que estragou."** Sem prova do que foi testado e de como o aparelho saiu da sua bancada, vira a palavra de um contra a do outro.
+- **Formatou e ficou sem rede.** Sem o driver da placa de rede não há internet para baixar o driver da placa de rede.
+- **O defeito que só aparece depois.** HD com setores ruins, memória de vídeo falhando, bateria gasta, porta USB frouxa.
+
+| Hoje | Com o Iron Check |
+|---|---|
+| Vários programas e sites de teste, quase tudo em inglês | **Um programa só**, 100% em português, que roda do pendrive |
+| Teste no olho e anotação no papel ou no WhatsApp | Testes guiados, com o **resultado de cada um registrado** |
+| O cliente reclama e você não tem como provar | **Laudo em PDF** com loja, OS, hardware e testes, com código único |
+| Formatou e a rede ficou sem driver | Driver da rede no pendrive, **instala sem internet** (mais de 400 modelos de placa) |
+| Descobre o HD ruim depois de entregar | **SMART, superfície e desempenho** antes de entregar |
+| Entrega sem saber se aguenta uso pesado | **Stress test** com corte automático por temperatura |
+
+---
+
+## 🧰 O que o Iron Check faz
+
+**1 · Receba e identifique**
+- **Hardware completo, no estilo CPU-Z** — 13 categorias (equipamento, placa-mãe e BIOS, processador, memória, vídeo, discos, tela, rede, áudio, bateria, dispositivos, segurança e Windows).
+- **Testes automáticos** — sistema, bateria, disco, memória, processador, Wi-Fi, Bluetooth e drivers em sequência.
+- **Sensores ao vivo** — temperaturas, cargas, clocks, consumo e ventoinhas, com mínimo, máximo e alertas.
+- **Ficha da placa de vídeo** e **saúde da bateria** (%, capacidade e ciclos).
+
+**2 · Teste cada peça**
+- **Discos (HD, SSD SATA e NVMe)** — SMART, varredura de superfície só de leitura, desempenho e integridade.
+- **Memória RAM e processador** — erros contados, nota de vários núcleos e de um núcleo, queda por calor.
+- **Memory MeoW** — testa a memória de vídeo em 12 padrões, mostra os bits com falha e aponta a causa provável.
+- **Tela, teclado e touchpad** — pixels mortos, manchas, tecla por tecla, gesto por gesto.
+- **Portas USB, webcam, alto-falantes, microfone, HDMI e carregador** — plugue e veja na hora; bata palmas e veja a barra do microfone subir.
+- **Wi-Fi e Bluetooth.**
+
+**3 · Conserte e deixe pronto**
+- **Drivers, rede primeiro** — reconhece a placa de rede e instala o driver da biblioteca (Intel, Realtek, MediaTek, Qualcomm/Atheros e Broadcom), sem internet.
+- **Driver de vídeo NVIDIA** — baixado só do servidor oficial, com a assinatura conferida e ponto de restauração antes.
+- **Conversores USB-serial e portas COM** (CH340, CP210x, FTDI, Prolific), **instalar apps**, **inicialização**, **otimiza**.
+- **Criador de Boot** — grava ISO em pendrive UEFI. **Overclock seguro** (NVIDIA), temporário e pela via oficial.
+
+**4 · Prove que aguenta**
+- **Stress test** — processador, memória e placa de vídeo juntos, com corte por temperatura e gráfico dos últimos 5 minutos.
+- **Benchmark** — 7 testes, com nota para comparar antes e depois. **Diagnóstico de rede.**
+
+**5 · Entregue com prova**
+- **Laudo técnico em PDF** com loja, OS, cliente, hardware completo, resultado de cada teste e linhas de assinatura.
+- **Código único** em cada laudo e **conferência de autenticidade** (SHA-256): o botão *Conferir* mostra se o PDF arquivado foi alterado.
+
+---
+
+## 📄 O laudo
+
+<p align="center">
+  <img src="docs/img/16-laudo.png" alt="Exemplo de laudo técnico em PDF do Iron Check" width="560"><br>
+  <sub>Exemplo de laudo gerado pelo programa. Os identificadores do aparelho foram ocultados.</sub>
+</p>
 
 ---
 
@@ -32,52 +92,46 @@ Chega de abrir cinco programas diferentes para cada reparo. **Consertou? Agora p
 
 | | |
 |:---:|:---:|
-| ![Discos](docs/img/02-discos.png) | ![Benchmark](docs/img/03-benchmark.png) |
-| **Discos** — SMART, superfície, desempenho e integridade | **Benchmark** — CPU, GPU, ray tracing, memória e disco |
-| ![Memory MeoW](docs/img/04-memory-meow.png) | ![Overclock](docs/img/05-overclock.png) |
-| **Memory MeoW** — procura defeito na memória de vídeo | **Overclock** — ajustes oficiais e verificador de estabilidade |
-| ![Drivers](docs/img/06-drivers.png) | ![Criador de Boot](docs/img/07-boot.png) |
-| **Drivers** — rede primeiro, depois vídeo e o resto | **Criador de Boot** — pendrive bootável de qualquer ISO |
-| ![Relatório](docs/img/08-relatorio.png) | |
-| **Relatório** — laudo em PDF com loja e OS | |
-
----
-
-## 🧰 O que o Iron Check resolve
-
-- **🔍 Detalha o computador inteiro** — processador, memória, placa de vídeo, discos, tela, bateria, rede, segurança e mais, no estilo CPU-Z.
-- **💾 Testa todos os HDs e SSDs** — saúde (SMART), varredura de superfície (só leitura) e desempenho, com teste específico para HD, SSD SATA e NVMe.
-- **🖥️ Testa a tela** — procura pixels mortos, manchas e vazamento de luz. Fundamental após troca de tela.
-- **⌨️ Testa teclado e touchpad** — tecla por tecla e gesto por gesto. Fundamental após reparo.
-- **🧠 Memory MeoW** — procura o defeito na memória da placa de vídeo, bit a bit, e aponta a causa provável.
-- **🔥 Stress test** — CPU, RAM e placa juntos, com corte por temperatura. Garante que o aparelho aguenta antes de entregar.
-- **📊 Benchmark** — nota de processador, placa, memória e disco, com ray tracing e checagem de DLSS.
-- **📥 Instala os drivers que faltam** — biblioteca própria (o driver de rede funciona **até sem internet**), driver de vídeo pelo servidor oficial e o resto pelo Windows Update.
-- **⚡ Overclock seguro** — ajusta a placa NVIDIA pela via oficial, com verificador de estabilidade e guia de BIOS.
-- **🚀 Criador de Boot** — formata o pendrive e grava uma ISO (Windows, Linux ou qualquer sistema) deixando-o bootável. Só mexe em pendrives USB, nunca no disco do sistema.
-- **✨ Otimiza a máquina** — limpa a memória, fecha o que atrapalha e ajusta o Windows para jogos.
-- **🌐 Diagnóstico de rede** — diz se o lag vem do Wi-Fi, do provedor ou de excesso de fila na conexão.
-- **📄 Relatório em PDF** — com a **identificação da loja e o número da OS**, para entregar ao cliente e usar em auditoria. Cada laudo tem um código único e dá para conferir depois se foi alterado.
+| ![Testes automáticos](docs/img/01b-situacao.png) | ![Sensores](docs/img/12-sensores.png) |
+| **Testes automáticos** — cada teste com o seu veredito | **Sensores** — temperaturas, cargas e consumo ao vivo |
+| ![Discos](docs/img/02-discos.png) | ![Teclado](docs/img/09-teclado.png) |
+| **Discos** — SMART, superfície, desempenho e integridade | **Teclado** — cada tecla acende ao ser apertada |
+| ![Portas USB](docs/img/11-usb.png) | ![Microfone](docs/img/10-microfone.png) |
+| **Portas USB** — plugue e veja na hora | **Microfone** — bata palmas e veja a barra subir |
+| ![Stress test](docs/img/14-stress.png) | ![Benchmark](docs/img/03-benchmark.png) |
+| **Stress test** — CPU, RAM e GPU com corte por temperatura | **Benchmark** — 7 testes com nota |
+| ![Memory MeoW](docs/img/04-memory-meow.png) | ![Drivers](docs/img/06-drivers.png) |
+| **Memory MeoW** — procura defeito na memória de vídeo | **Drivers** — rede primeiro, depois vídeo e o resto |
+| ![Relatório](docs/img/08-relatorio.png) | ![Criador de Boot](docs/img/07-boot.png) |
+| **Relatório** — loja, OS e o botão do PDF | **Criador de Boot** — pendrive bootável de ISO do Windows ou Linux |
 
 ---
 
 ## ⬇️ Download
 
-**[Baixar o Iron Check para Windows](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Portatil.exe)** — um arquivo só (`Iron-Check-Portatil.exe`), **sem instalar**: abra do pendrive, de qualquer pasta, em qualquer computador.
+| Arquivo | Para quê |
+|---|---|
+| **[Iron-Check-Kit.zip](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Kit.zip)** (353 MB) | **Recomendado.** O programa + a pasta `drivers` (mais de 400 modelos de placa de rede e conversores USB-serial) + LEIA-ME. Extraia e leve a pasta inteira para o pendrive. |
+| **[Iron-Check-Portatil.exe](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Portatil.exe)** (92 MB) | Só o programa, para experimentar. Abre sozinho, mas sem a biblioteca de drivers de rede. |
 
-- A **primeira abertura demora** (o programa se descompacta; pode levar de 15 segundos a alguns minutos). Clique uma vez só e aguarde.
-- O programa pede **administrador** para ler a saúde dos discos, a temperatura e instalar drivers.
-- Os dados (chave e configurações) ficam numa pasta **`IronCheck-dados` ao lado do arquivo**, não no computador do cliente.
-- O Windows pode mostrar um aviso de "editor desconhecido": clique em **Mais informações → Executar assim mesmo**.
+**Como usar**
+1. Peça a sua chave (de teste ou de assinante) no WhatsApp.
+2. Extraia o kit e abra o `Iron-Check-Portatil.exe`. Aceite o pedido de administrador do Windows.
+3. A **primeira abertura prepara os arquivos** numa pasta `IronCheck-programa` ao lado do `.exe` (alguns segundos); as seguintes abrem rápido (cerca de 1 segundo no nosso teste).
+4. Digite a chave. Os dados (chave e configurações) ficam numa pasta `IronCheck-dados` **ao lado do arquivo**, não no computador do cliente.
+5. Mantenha a pasta **`drivers` ao lado do `.exe`**: é de lá que o programa instala o driver da placa de rede sem internet.
+
+> O Windows pode mostrar o aviso de "editor desconhecido" (SmartScreen): clique em **Mais informações → Executar assim mesmo**. Alguns antivírus analisam o arquivo na primeira abertura, o que pode levar alguns segundos a mais.
 
 ---
 
 ## 🔑 Teste, assinatura e suporte
 
 - **Quer testar?** Peça uma **chave de teste** pelo WhatsApp: ela vale por poucos dias e libera o programa completo.
-- A **assinatura é mensal**. Pague pelo **Pix** e mande o comprovante no WhatsApp: você recebe a sua **chave**, que serve em **vários computadores** (feito para técnicos que atendem em muitos PCs). É só digitar a chave em cada um.
-- A chave é conferida pela internet. **Computador sem rede?** A própria tela de ativação oferece a aba **Drivers** (só ela) para instalar o driver da placa de rede, que vem junto no programa. Depois que a rede funciona, a chave é conferida sozinha.
-- O uso da mesma chave por muitas pessoas é detectado, e a chave pode ser bloqueada. Sem confirmação, o programa fica bloqueado até a licença ser regularizada. **Seus arquivos nunca são apagados.**
+- A **assinatura é mensal**. Pague pelo **Pix** e mande o comprovante no WhatsApp: você recebe a sua **chave**, que serve em **vários computadores** (feito para técnicos que atendem em muitos PCs). Para saber o valor, é só perguntar.
+- A chave é conferida pela internet. Sem confirmação, o programa roda até 24 horas com a última conferência e depois fica bloqueado até regularizar. **Seus arquivos nunca são apagados.**
+- **Computador sem rede?** A tela de ativação oferece a aba **Drivers** (só ela) para instalar o driver da placa de rede a partir da pasta `drivers`. Depois que a rede funciona, a chave é conferida sozinha.
+- O uso da mesma chave por muitas pessoas é detectado, e a chave pode ser bloqueada.
 
 <p align="center">
   <a href="https://wa.me/5521966547296?text=Ol%C3%A1!%20Quero%20uma%20chave%20de%20teste%20do%20Iron%20Check."><b>📱 Falar no WhatsApp · 21 96654-7296</b></a>
@@ -85,12 +139,21 @@ Chega de abrir cinco programas diferentes para cada reparo. **Consertou? Agora p
 
 ---
 
+## 🛡️ Seguro para o aparelho do cliente
+
+- A **varredura de superfície só lê**; o teste de desempenho usa um arquivo temporário apagado no fim. Nenhum teste grava no disco bruto.
+- O **Criador de Boot** só enxerga pendrives USB e nunca toca no disco do sistema.
+- **Overclock temporário** (volta ao reiniciar) e só pelos controles oficiais da NVIDIA; os ajustes de jogo guardam o valor original; o driver de vídeo ganha **ponto de restauração** antes de instalar.
+- Drivers só de **fontes oficiais**; o de vídeo é baixado de servidores da NVIDIA, com a assinatura digital conferida.
+
+---
+
 ## 💻 Requisitos
 
-- **Windows 10 ou 11** (64 bits).
-- Para os testes completos (saúde dos discos, temperatura, overclock, criar pendrive): **abrir como administrador**.
-- Placa de vídeo **NVIDIA GeForce** para os recursos específicos de placa (AMD e Intel funcionam no restante).
-- **Internet** para conferir a chave (ao abrir e de tempos em tempos; o programa aguenta algumas horas sem conexão).
+- **Windows 10 ou 11** (64 bits) no computador onde você abre o arquivo. Não roda em Windows 7 ou 8.
+- Para os testes completos (saúde dos discos, temperatura, overclock, criar pendrive): **abrir como administrador** (o programa já pede).
+- Placa de vídeo **NVIDIA GeForce** para os recursos específicos de placa (overclock, instalação do driver); AMD e Intel funcionam no restante.
+- **Internet** para conferir a chave (ao abrir e de tempos em tempos).
 
 ---
 
