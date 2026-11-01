@@ -1,3 +1,4 @@
 *.exe
 Thumbs.db
 imagens/
+.playwright-cli/

@@ -1,5 +1,7 @@
 <div align="center">
 
+[<img src="docs/img/flag-br.svg" width="22" alt="">&nbsp;**Português**](README.md) · [<img src="docs/img/flag-us.svg" width="22" alt="">&nbsp;English](README.en.md)
+
 <img src="docs/img/icon.png" alt="Iron Check" width="140">
 
 # IRON CHECK
