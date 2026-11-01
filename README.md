@@ -6,7 +6,7 @@
 
 ### Entregue cada aparelho com laudo, não com promessa.
 
-**Testes, diagnóstico, drivers e laudo em PDF para assistências técnicas. Tudo em português, num programa que roda do pendrive.**
+**Testes, diagnóstico, drivers e laudo em PDF para assistências técnicas. Tudo em português e em inglês (interruptor com as bandeiras do Brasil e dos EUA), num programa que roda do pendrive.**
 
 [⬇️ Baixar o kit completo](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Kit.zip) ·
 [💾 Só o programa](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Portatil.exe) ·
@@ -38,7 +38,7 @@ Aparelho que volta custa tempo, dinheiro e cliente. O Iron Check foi feito para 
 
 | Hoje | Com o Iron Check |
 |---|---|
-| Vários programas e sites de teste, quase tudo em inglês | **Um programa só**, 100% em português, que roda do pendrive |
+| Vários programas e sites de teste, quase tudo em inglês | **Um programa só**, em português e em inglês, que roda do pendrive |
 | Teste no olho e anotação no papel ou no WhatsApp | Testes guiados, com o **resultado de cada um registrado** |
 | O cliente reclama e você não tem como provar | **Laudo em PDF** com loja, OS, hardware e testes, com código único |
 | Formatou e a rede ficou sem driver | Driver da rede no pendrive, **instala sem internet** (mais de 400 modelos de placa) |
@@ -74,7 +74,8 @@ Aparelho que volta custa tempo, dinheiro e cliente. O Iron Check foi feito para 
 - **Benchmark** — 7 testes, com nota para comparar antes e depois. **Diagnóstico de rede.**
 
 **5 · Entregue com prova**
-- **Laudo técnico em PDF** com loja, OS, cliente, hardware completo, resultado de cada teste e linhas de assinatura.
+- **Laudo técnico em PDF** com loja, OS, cliente, hardware completo, resultado de cada teste e linhas de assinatura. Sai em português ou em inglês, conforme o idioma da tela.
+- **Português e inglês** com um clique, pelo interruptor das bandeiras do Brasil e dos EUA no topo.
 - **Código único** em cada laudo e **conferência de autenticidade** (SHA-256): o botão *Conferir* mostra se o PDF arquivado foi alterado.
 
 ---
@@ -94,6 +95,8 @@ Aparelho que volta custa tempo, dinheiro e cliente. O Iron Check foi feito para 
 |:---:|:---:|
 | ![Testes automáticos](docs/img/01b-situacao.png) | ![Sensores](docs/img/12-sensores.png) |
 | **Testes automáticos** — cada teste com o seu veredito | **Sensores** — temperaturas, cargas e consumo ao vivo |
+| ![Em inglês](docs/img/17-ingles.png) | |
+| **Português e inglês** — troca com um clique, laudo incluído | |
 | ![Discos](docs/img/02-discos.png) | ![Teclado](docs/img/09-teclado.png) |
 | **Discos** — SMART, superfície, desempenho e integridade | **Teclado** — cada tecla acende ao ser apertada |
 | ![Portas USB](docs/img/11-usb.png) | ![Microfone](docs/img/10-microfone.png) |
