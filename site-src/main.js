@@ -8,6 +8,29 @@ import { PAGES, CHIPS, NAV, TABS, SCREEN, LANG_BTN, BENCH, FLAGS } from "./data.
 
 gsap.registerPlugin(ScrollTrigger);
 
+// ---------- Anúncio que trouxe a pessoa: conta uma conversão quando ela baixa ou chama no WhatsApp ----------
+// A marca (?ad=...&lugar=...) vem do link do anúncio no CRM. Fica só nesta aba e some do endereço. Só somas: nada identifica a pessoa.
+{
+  const params = new URLSearchParams(location.search);
+  const ad = params.get("ad"), place = params.get("lugar");
+  if (ad && place) {
+    try { sessionStorage.setItem("ic-anuncio", JSON.stringify({ id: ad, local: place })); } catch { /* sem armazenamento: só não conta */ }
+    params.delete("ad");
+    params.delete("lugar");
+    const rest = params.toString();
+    history.replaceState(null, "", location.pathname + (rest ? `?${rest}` : "") + location.hash);
+  }
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest?.('a[href*="/releases/latest/download/"], a[href*="wa.me/"]')) return;
+    try {
+      const saved = sessionStorage.getItem("ic-anuncio");
+      if (!saved) return;
+      sessionStorage.removeItem("ic-anuncio"); // uma conversão por visita
+      navigator.sendBeacon("https://crm-pessoal-chi.vercel.app/api/banners/evento", JSON.stringify({ ...JSON.parse(saved), tipo: "conversao" }));
+    } catch { /* o link abre do mesmo jeito */ }
+  });
+}
+
 const lang = document.documentElement.lang.startsWith("en") ? "en" : "pt";
 const base = lang === "en" ? "../" : "";
 const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
