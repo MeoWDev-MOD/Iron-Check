@@ -18,7 +18,7 @@
 <link rel="icon" href="img/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=e4bc280ff8">
+<link rel="stylesheet" href="site.css?v=ca711f6d24">
 <script>try{if(localStorage.getItem("ic-lang")==="en")location.replace("en/"+location.hash)}catch(e){}</script>
 </head>
 <body>
@@ -73,7 +73,7 @@
     <div class="nb-nav">
       <p class="nb-caption" aria-live="polite"></p>
       <div class="nb-chips" role="group" aria-label="Por dentro"></div>
-      <p class="nb-hint">Clique no menu da tela: é o menu real do programa, em fotos das telas de verdade.</p>
+      <p class="nb-hint">Clique no menu da tela: é o menu real do programa, em fotos das telas de verdade. As bandeiras trocam o idioma e, no Benchmark, cada teste mostra a sua animação.</p>
     </div>
   </div>
 </section>
@@ -92,7 +92,8 @@
 <section class="px-stage" id="pixels">
   <div class="px-pin">
     <canvas class="px-gl" aria-hidden="true"></canvas>
-    <span class="px-found" aria-hidden="true">Pixel apagado</span>
+    <span class="px-ring" aria-hidden="true"></span>
+    <span class="px-found" aria-hidden="true" data-dead="Pixel apagado" data-stuck="Pixel travado">Pixel apagado</span>
     <div class="px-copy">
       <h2>Pixel morto não passa batido</h2>
       <p>O Iron Check enche a tela de cor, uma de cada vez. Mancha, vazamento de luz e pixel apagado aparecem na hora, antes de o aparelho voltar para o cliente.</p>
@@ -103,7 +104,7 @@
         <button type="button" data-color="0,0,255" aria-pressed="false"><i style="background:rgb(0,0,255)"></i>Azul</button>
         <button type="button" data-color="0,0,0" aria-pressed="false"><i style="background:rgb(0,0,0)"></i>Preto</button>
       </div>
-      <p class="px-note">Painel de exemplo, feito nesta página. Role para aproximar e troque a cor.</p>
+      <p class="px-note">Painel de exemplo, feito nesta página. Passe o mouse (ou o dedo) para acender os pixels e ache o que não acende. No preto, o defeito é o pixel que não apaga.</p>
     </div>
   </div>
 </section>
@@ -412,7 +413,7 @@
   <svg aria-hidden="true"><use href="#i-wa"/></svg>
 </a>
 
-<script type="module" src="js/main.js?v=98576f57e5"></script>
+<script type="module" src="js/main.js?v=6d01dd84ad"></script>
 
 </body>
 </html>

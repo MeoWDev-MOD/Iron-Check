@@ -19,7 +19,7 @@
 <link rel="icon" href="../img/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../site.css?v=e4bc280ff8">
+<link rel="stylesheet" href="../site.css?v=ca711f6d24">
 </head>
 <body>
 
@@ -73,7 +73,7 @@
     <div class="nb-nav">
       <p class="nb-caption" aria-live="polite"></p>
       <div class="nb-chips" role="group" aria-label="Inside"></div>
-      <p class="nb-hint">Click the menu on the screen: it is the real program menu, over photos of the real screens.</p>
+      <p class="nb-hint">Click the menu on the screen: it is the real program menu, over photos of the real screens. The flags switch the language and, in Benchmark, each test shows its animation.</p>
     </div>
   </div>
 </section>
@@ -92,7 +92,8 @@
 <section class="px-stage" id="pixels">
   <div class="px-pin">
     <canvas class="px-gl" aria-hidden="true"></canvas>
-    <span class="px-found" aria-hidden="true">Dark pixel</span>
+    <span class="px-ring" aria-hidden="true"></span>
+    <span class="px-found" aria-hidden="true" data-dead="Dark pixel" data-stuck="Stuck pixel">Dark pixel</span>
     <div class="px-copy">
       <h2>No dead pixel gets past it</h2>
       <p>Iron Check fills the screen with color, one at a time. Stains, light bleed and dark pixels show up right away, before the device goes back to the customer.</p>
@@ -103,7 +104,7 @@
         <button type="button" data-color="0,0,255" aria-pressed="false"><i style="background:rgb(0,0,255)"></i>Blue</button>
         <button type="button" data-color="0,0,0" aria-pressed="false"><i style="background:rgb(0,0,0)"></i>Black</button>
       </div>
-      <p class="px-note">Sample panel, made on this page. Scroll to zoom in and change the color.</p>
+      <p class="px-note">Sample panel, made on this page. Move the mouse (or your finger) to light the pixels and find the one that stays dark. On black, the fault is the pixel that never turns off.</p>
     </div>
   </div>
 </section>
@@ -412,7 +413,7 @@
   <svg aria-hidden="true"><use href="#i-wa"/></svg>
 </a>
 
-<script type="module" src="../js/main.js?v=98576f57e5"></script>
+<script type="module" src="../js/main.js?v=6d01dd84ad"></script>
 
 </body>
 </html>

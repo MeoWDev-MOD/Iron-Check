@@ -1,4 +1,5 @@
-// Telas do programa mostradas no notebook. As posições dos botões foram medidas no programa real (1440 x 900).
+// Telas do programa mostradas no notebook. As posições dos botões foram medidas no programa real (1440 x 900),
+// em português e em inglês quando o texto muda a largura do botão.
 export const SCREEN = { w: 1440, h: 900 };
 
 const zone = (id, i) => ({ id, r: [13, Math.round(115 + i * 39.2), 207, 34] });
@@ -12,13 +13,46 @@ export const NAV = {
 };
 
 export const TABS = [
-  { label: { pt: "Iron Check", en: "Iron Check" }, first: "sistema", r: [84, 11, 120, 33] },
-  { label: { pt: "Tools", en: "Tools" }, first: "benchmark", r: [212, 11, 82, 33] },
-  { label: { pt: "Tela e entrada", en: "Screen and input" }, first: "tela", r: [302, 11, 144, 33] },
-  { label: { pt: "Integração", en: "Integration" }, first: "iluminacao", r: [454, 11, 122, 33] },
-  { label: { pt: "Relatório", en: "Report" }, first: "relatorio", r: [584, 11, 110, 33] },
-  { label: { pt: "Extra", en: "Extra" }, first: "extra", r: [702, 11, 81, 33] },
+  { label: { pt: "Iron Check", en: "Iron Check" }, first: "sistema", r: { pt: [84, 11, 120, 33], en: [84, 11, 120, 33] } },
+  { label: { pt: "Tools", en: "Tools" }, first: "benchmark", r: { pt: [212, 11, 82, 33], en: [212, 11, 82, 33] } },
+  { label: { pt: "Tela e entrada", en: "Screen and input" }, first: "tela", r: { pt: [302, 11, 144, 33], en: [302, 11, 145, 33] } },
+  { label: { pt: "Integração", en: "Integration" }, first: "iluminacao", r: { pt: [454, 11, 122, 33], en: [455, 11, 125, 33] } },
+  { label: { pt: "Relatório", en: "Report" }, first: "relatorio", r: { pt: [584, 11, 110, 33], en: [589, 11, 89, 33] } },
+  { label: { pt: "Extra", en: "Extra" }, first: "extra", r: { pt: [702, 11, 81, 33], en: [686, 11, 81, 33] } },
 ];
+
+// Interruptor de idioma do programa (bandeiras no alto, à direita).
+export const LANG_BTN = [1163, 10, 78, 36];
+
+// Sub-abas do Benchmark: foto de cada uma e o vídeo da animação dela, gravado do programa (o chip e a escultura de luz
+// não têm texto; mundo aberto, memória e disco escrevem no desenho, por isso têm vídeo em cada idioma).
+const STAGE = [322, 259, 589, 331];
+const ROWS = [322, 259, 589, 229];
+const B = (id, ptL, enL, ptD, enD, video, v, pt, en) => ({ id, label: { pt: ptL, en: enL }, desc: { pt: ptD, en: enD }, video, v, r: { pt, en } });
+export const BENCH = [
+  B("render", "Render (CPU)", "Render (CPU)", "O processador calcula uma imagem em path tracing em todas as threads, no mesmo princípio do Cinebench.", "The processor computes a path-traced image on every thread, on the same principle as Cinebench.", "render", STAGE, [288, 188, 104, 29], [288, 188, 104, 29]),
+  B("cena", "Cena de jogo (GPU)", "Game scene (GPU)", "O chip em 3D com carga total na placa de vídeo. A nota é a carga que ela sustenta.", "The 3D chip at full load on the graphics card. The score is the load it sustains.", "cena", STAGE, [400, 188, 141, 29], [400, 188, 134, 29]),
+  B("rt", "Ray tracing (GPU)", "Ray tracing (GPU)", "Escultura de luz com reflexo, refração e sombra suave, calculada raio a raio pela placa.", "A light sculpture with reflections, refraction and soft shadows, computed ray by ray by the card.", "rt", STAGE, [549, 188, 128, 29], [542, 188, 128, 29]),
+  B("dlss", "DLSS 5", "DLSS 5", "Diz se a placa tem DLSS 5 e mostra quanto FPS a reconstrução de imagem ganha.", "Tells whether the card supports DLSS 5 and shows how many FPS image reconstruction gains.", "rt", STAGE, [686, 188, 68, 29], [679, 188, 68, 29]),
+  B("sim", "Simulação de jogo (CPU)", "Game simulation (CPU)", "Um mundo aberto com 30 mil unidades vivas, calculado em todas as threads do processador.", "An open world with 30 thousand living units, computed on every processor thread.", "sim-{lang}", STAGE, [761, 188, 170, 29], [754, 188, 160, 29]),
+  B("mem", "Memória e carregamento", "Memory and loading", "Latência e banda da RAM, e quanto tempo um mapa de jogo leva para carregar do disco.", "RAM latency and bandwidth, and how long a game map takes to load from the disk.", "mem-{lang}", ROWS, [939, 188, 174, 29], [923, 188, 148, 29]),
+  B("disco", "Disco", "Disk", "Leitura e escrita sequenciais e acessos aleatórios de 4 KB, direto no disco, sem o cache do Windows.", "Sequential read and write and random 4 KB access, straight to the disk, without the Windows cache.", "disco-{lang}", ROWS, [1121, 188, 59, 29], [1079, 188, 52, 29]),
+];
+
+// Bandeiras do interruptor, iguais às do programa (src/i18n.js).
+const flagBR = '<svg viewBox="0 0 72 50" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="72" height="50" fill="#009c3b"/><path d="M36 4 68 25 36 46 4 25Z" fill="#ffdf00"/><circle cx="36" cy="25" r="11.5" fill="#002776"/><path d="M25 27.4c7.6-3.8 15.6-3.4 22.2 1.8" stroke="#fff" stroke-width="2.4" fill="none"/><g fill="#fff"><circle cx="31" cy="21" r=".9"/><circle cx="36" cy="19" r=".9"/><circle cx="41" cy="21.5" r=".9"/><circle cx="33" cy="30" r=".8"/><circle cx="39" cy="31" r=".8"/><circle cx="29.5" cy="25" r=".7"/><circle cx="43.5" cy="26" r=".7"/></g></svg>';
+function flagUS() {
+  const h = 40 / 13;
+  let s = '<svg viewBox="0 0 76 40" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="76" height="40" fill="#fff"/>';
+  for (let i = 0; i < 13; i += 2) s += `<rect y="${(i * h).toFixed(2)}" width="76" height="${h.toFixed(2)}" fill="#b22234"/>`;
+  s += `<rect width="31" height="${(7 * h).toFixed(2)}" fill="#3c3b6e"/><g fill="#fff">`;
+  for (let r = 0; r < 9; r++) {
+    const cols = r % 2 ? 5 : 6;
+    for (let c = 0; c < cols; c++) s += `<circle cx="${(r % 2 ? 5.2 + c * 5.1 : 2.6 + c * 5.1).toFixed(1)}" cy="${(2.1 + r * 2.15).toFixed(1)}" r=".85"/>`;
+  }
+  return s + "</g></svg>";
+}
+export const FLAGS = { pt: flagBR, en: flagUS() };
 
 const P = (id, group, ptT, enT, ptD, enD, extra = {}) => ({ id, group, title: { pt: ptT, en: enT }, desc: { pt: ptD, en: enD }, ...extra });
 
