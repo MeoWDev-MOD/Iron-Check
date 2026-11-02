@@ -20,7 +20,7 @@
 ---
 
 <p align="center">
-  <img src="docs/img/01-sistema.png" alt="Tela Sistema do Iron Check" width="900">
+  <img src="docs/img/app/pt/sistema.webp" alt="Tela Sistema do Iron Check" width="900">
 </p>
 
 ## 🐺 O que é
@@ -95,19 +95,19 @@ Aparelho que volta custa tempo, dinheiro e cliente. O Iron Check foi feito para 
 
 | | |
 |:---:|:---:|
-| ![Testes automáticos](docs/img/01b-situacao.png) | ![Sensores](docs/img/12-sensores.png) |
+| ![Testes automáticos](docs/img/app/pt/situacao.webp) | ![Sensores](docs/img/app/pt/sensores.webp) |
 | **Testes automáticos** — cada teste com o seu veredito | **Sensores** — temperaturas, cargas e consumo ao vivo |
-| ![Em inglês](docs/img/17-ingles.png) | |
+| ![Em inglês](docs/img/app/en/sistema.webp) | |
 | **Português e inglês** — troca com um clique, laudo incluído | |
-| ![Discos](docs/img/02-discos.png) | ![Teclado](docs/img/09-teclado.png) |
+| ![Discos](docs/img/app/pt/disco.webp) | ![Teclado](docs/img/app/pt/teclado.webp) |
 | **Discos** — SMART, superfície, desempenho e integridade | **Teclado** — cada tecla acende ao ser apertada |
-| ![Portas USB](docs/img/11-usb.png) | ![Microfone](docs/img/10-microfone.png) |
+| ![Portas USB](docs/img/app/pt/usb.webp) | ![Microfone](docs/img/app/pt/microfone.webp) |
 | **Portas USB** — plugue e veja na hora | **Microfone** — bata palmas e veja a barra subir |
-| ![Stress test](docs/img/14-stress.png) | ![Benchmark](docs/img/03-benchmark.png) |
+| ![Stress test](docs/img/app/pt/stress.webp) | ![Benchmark](docs/img/app/pt/benchmark.webp) |
 | **Stress test** — CPU, RAM e GPU com corte por temperatura | **Benchmark** — 7 testes com nota |
-| ![Memory MeoW](docs/img/04-memory-meow.png) | ![Drivers](docs/img/06-drivers.png) |
+| ![Memory MeoW](docs/img/app/pt/memorymeow.webp) | ![Drivers](docs/img/app/pt/drivers.webp) |
 | **Memory MeoW** — procura defeito na memória de vídeo | **Drivers** — rede primeiro, depois vídeo e o resto |
-| ![Relatório](docs/img/08-relatorio.png) | ![Criador de Boot](docs/img/07-boot.png) |
+| ![Relatório](docs/img/app/pt/relatorio.webp) | ![Criador de Boot](docs/img/app/pt/bootcreator.webp) |
 | **Relatório** — loja, OS e o botão do PDF | **Criador de Boot** — pendrive bootável de ISO do Windows ou Linux |
 
 ---

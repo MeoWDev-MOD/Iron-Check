@@ -2,3 +2,5 @@
 Thumbs.db
 imagens/
 .playwright-cli/
+site-src/node_modules/
+.taste-skill/

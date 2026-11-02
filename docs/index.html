@@ -5,17 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Iron Check — testes, drivers e laudo em PDF para assistência técnica</title>
 <meta name="description" content="Programa portátil, em português e inglês, para assistências técnicas: testa o computador inteiro, instala o driver da rede sem internet e emite laudo em PDF com a OS do cliente. Peça uma chave de teste.">
-<meta name="theme-color" content="#0a0e18">
+<meta name="theme-color" content="#130a2e">
 <link rel="canonical" href="https://meowdev-mod.github.io/Iron-Check/">
 <link rel="alternate" hreflang="pt-BR" href="https://meowdev-mod.github.io/Iron-Check/">
 <link rel="alternate" hreflang="en" href="https://meowdev-mod.github.io/Iron-Check/en/">
 <link rel="alternate" hreflang="x-default" href="https://meowdev-mod.github.io/Iron-Check/">
 <meta property="og:title" content="Iron Check — entregue cada aparelho com laudo, não com promessa">
 <meta property="og:description" content="Testa o computador inteiro, instala o driver da rede sem internet e emite laudo em PDF com a OS. Programa portátil para assistências técnicas.">
-<meta property="og:image" content="https://meowdev-mod.github.io/Iron-Check/img/01-sistema.png">
+<meta property="og:image" content="https://meowdev-mod.github.io/Iron-Check/img/app/pt/sistema.webp">
 <meta property="og:url" content="https://meowdev-mod.github.io/Iron-Check/">
 <meta property="og:type" content="website">
 <link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="site.css">
 <script>try{if(localStorage.getItem("ic-lang")==="en")location.replace("en/"+location.hash)}catch(e){}</script>
 </head>
@@ -34,7 +36,7 @@
     <nav>
       <a class="link" href="#recursos">Recursos</a>
       <a class="link" href="#laudo">Laudo</a>
-      <a class="link" href="#telas">Telas</a>
+      <a class="link" href="#notebook">Telas</a>
       <a class="link" href="#como">Como funciona</a>
       <a class="link" href="#faq">Dúvidas</a>
       <a class="lang-sw" id="lang-sw" data-cur="pt" data-to="en" href="en/" hreflang="en" lang="en" aria-label="Switch to English" title="Português · English"><span class="fl fl-br"><svg viewBox="0 0 72 50" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#f-br"/></svg></span><span class="fl fl-us"><svg viewBox="0 0 76 40" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><use href="#f-us"/></svg></span><span class="ring"></span></a>
@@ -48,12 +50,14 @@
 
 <main id="topo">
 
-<section class="hero">
-  <div class="wrap">
-    <span class="eyebrow">Para donos de assistência técnica e lojas de reparo</span>
-    <h1>Entregue cada aparelho <br>com laudo, não com promessa.</h1>
-    <p class="lead">O Iron Check testa o computador inteiro, instala o driver que falta (o da placa de rede funciona até sem internet) e emite um <b>laudo em PDF com a ordem de serviço</b> do seu cliente. Tudo em português (e em inglês, com um clique), num programa que roda do pendrive.</p>
-    <div class="cta">
+<section class="nb-stage" id="notebook">
+  <div class="nb-pin">
+    <canvas class="nb-gl" aria-hidden="true"></canvas>
+    <div class="nb-css"></div>
+    <div class="nb-copy">
+      <h1>Entregue com laudo, não com promessa.</h1>
+      <p class="lead">O Iron Check testa o computador inteiro, instala o driver que falta (o da placa de rede funciona até sem internet) e emite um <b>laudo em PDF com a ordem de serviço</b> do seu cliente. Tudo em português (e em inglês, com um clique), num programa que roda do pendrive.</p>
+      <div class="cta"><button class="btn btn-ghost nb-open" type="button">Abrir o notebook</button>
       <a class="btn btn-wa" href="https://wa.me/5521966547296?text=Ol%C3%A1!%20Quero%20uma%20chave%20de%20teste%20do%20Iron%20Check." target="_blank" rel="noopener">
         <svg aria-hidden="true"><use href="#i-wa"/></svg>
         Pedir chave de teste no WhatsApp
@@ -63,13 +67,19 @@
         Baixar o programa
       </a>
     </div>
-    <p class="fine">Windows 10 ou 11 (64 bits) · roda do pendrive, sem instalar · a chave de teste libera o programa completo por poucos dias</p>
-
-    <div class="shot">
-      <div class="chrome"><i></i><i></i><i></i></div>
-      <img src="img/01-sistema.png" alt="Tela Sistema do Iron Check, com a identificação do computador e os testes automáticos" width="1440" height="900">
+      <p class="fine">Windows 10 ou 11 (64 bits) · roda do pendrive, sem instalar · a chave de teste libera o programa completo por poucos dias</p>
     </div>
+    <div class="nb-flat"></div>
+    <div class="nb-nav">
+      <p class="nb-caption" aria-live="polite"></p>
+      <div class="nb-chips" role="group" aria-label="Por dentro"></div>
+      <p class="nb-hint">Clique no menu da tela: é o menu real do programa, em fotos das telas de verdade.</p>
+    </div>
+  </div>
+</section>
 
+<section class="numbers">
+  <div class="wrap">
     <div class="stats" aria-label="Números do programa">
       <div><b>30+</b><span>testes e ferramentas</span></div>
       <div><b>400+</b><span>placas de rede com driver offline</span></div>
@@ -79,22 +89,36 @@
   </div>
 </section>
 
+<section class="px-stage" id="pixels">
+  <div class="px-pin">
+    <canvas class="px-gl" aria-hidden="true"></canvas>
+    <span class="px-found" aria-hidden="true">Pixel apagado</span>
+    <div class="px-copy">
+      <h2>Pixel morto não passa batido</h2>
+      <p>O Iron Check enche a tela de cor, uma de cada vez. Mancha, vazamento de luz e pixel apagado aparecem na hora, antes de o aparelho voltar para o cliente.</p>
+      <div class="px-swatches" role="group" aria-label="Cor do teste de tela">
+        <button type="button" data-color="255,255,255" aria-pressed="true"><i style="background:rgb(255,255,255)"></i>Branco</button>
+        <button type="button" data-color="255,0,0" aria-pressed="false"><i style="background:rgb(255,0,0)"></i>Vermelho</button>
+        <button type="button" data-color="0,255,0" aria-pressed="false"><i style="background:rgb(0,255,0)"></i>Verde</button>
+        <button type="button" data-color="0,0,255" aria-pressed="false"><i style="background:rgb(0,0,255)"></i>Azul</button>
+        <button type="button" data-color="0,0,0" aria-pressed="false"><i style="background:rgb(0,0,0)"></i>Preto</button>
+      </div>
+      <p class="px-note">Painel de exemplo, feito nesta página. Role para aproximar e troque a cor.</p>
+    </div>
+  </div>
+</section>
+
 <section id="dor">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Você se reconhece?</span>
-      <h2>Aparelho que volta custa tempo, dinheiro e cliente</h2>
+      <h2>Aparelho que volta custa caro</h2>
       <p class="lead">Se você toca uma assistência, provavelmente já passou por isto:</p>
     </div>
     <div class="grid cards">
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg></div>
-        <h3>Cinco programas para um reparo</h3><p>Um para ler o hardware, outro para o HD, outro para a memória, um site para o teclado… quase tudo em inglês, cada um de um jeito, e nada fica registrado.</p></article>
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h3>“Foi você que estragou”</h3><p>Sem prova do que foi testado e de como o aparelho saiu da sua bancada, a conversa com o cliente vira a palavra de um contra a do outro.</p></article>
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M12 20h.01M2 9a15 15 0 0 1 20 0M3 3l18 18"/></svg></div>
-        <h3>Formatou e ficou sem rede</h3><p>Sem o driver da placa de rede não existe internet para baixar o driver da placa de rede. E lá vai você atrás do pendrive certo ou do celular.</p></article>
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg></div>
-        <h3>O defeito que só aparece depois</h3><p>HD com setores ruins, memória de vídeo falhando, bateria gasta, porta USB frouxa. O que não foi testado vira retorno.</p></article>
+      <article class="card"><h3>Cinco programas para um reparo</h3><p>Um para ler o hardware, outro para o HD, outro para a memória, um site para o teclado… quase tudo em inglês, cada um de um jeito, e nada fica registrado.</p></article>
+      <article class="card"><h3>“Foi você que estragou”</h3><p>Sem prova do que foi testado e de como o aparelho saiu da sua bancada, a conversa com o cliente vira a palavra de um contra a do outro.</p></article>
+      <article class="card"><h3>Formatou e ficou sem rede</h3><p>Sem o driver da placa de rede não existe internet para baixar o driver da placa de rede. E lá vai você atrás do pendrive certo ou do celular.</p></article>
+      <article class="card"><h3>O defeito que só aparece depois</h3><p>HD com setores ruins, memória de vídeo falhando, bateria gasta, porta USB frouxa. O que não foi testado vira retorno.</p></article>
     </div>
     <p class="pain-end">O Iron Check foi feito para resolver exatamente isso.</p>
   </div>
@@ -103,7 +127,6 @@
 <section class="showcase" id="porque">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Antes e depois</span>
       <h2>O que muda na sua bancada</h2>
     </div>
     <table class="compare">
@@ -125,85 +148,88 @@
 <section id="recursos">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">O que ele faz</span>
-      <h2>Do balcão à entrega, tudo na mesma janela</h2>
+      <h2>Do balcão à entrega, numa janela só</h2>
       <p class="lead">Mais de 30 testes e ferramentas, na ordem em que você trabalha.</p>
     </div>
 
     <div class="groups">
       <article class="group wide">
-        <div class="gh"><span class="n">1</span><h3>Receba e identifique</h3></div>
+        <div class="gh"><h3>Receba e identifique</h3></div>
         <p class="sub">Saiba em segundos o que tem dentro do aparelho.</p>
         <ul class="feat">
-          <li><b>Hardware completo, no estilo CPU-Z</b> — 13 categorias: equipamento, placa-mãe e BIOS, processador, memória, vídeo, discos, tela, rede, áudio, bateria, dispositivos, segurança e Windows.</li>
-          <li><b>Testes automáticos</b> — sistema, bateria, disco, memória, processador, Wi-Fi, Bluetooth e drivers em sequência, cada um com o seu veredito.</li>
-          <li><b>Sensores ao vivo</b> — temperaturas, cargas, clocks, consumo e ventoinhas, com mínimo, máximo e alertas.</li>
-          <li><b>Ficha da placa de vídeo</b> — modelo, chip, memória, driver e sensores em tempo real.</li>
-          <li><b>Bateria</b> — saúde em %, capacidade atual contra a de fábrica e ciclos de carga.</li>
+          <li><b>Hardware completo, no estilo CPU-Z</b>: 13 categorias: equipamento, placa-mãe e BIOS, processador, memória, vídeo, discos, tela, rede, áudio, bateria, dispositivos, segurança e Windows.</li>
+          <li><b>Testes automáticos</b>: sistema, bateria, disco, memória, processador, Wi-Fi, Bluetooth e drivers em sequência, cada um com o seu veredito.</li>
+          <li><b>Sensores ao vivo</b>: temperaturas, cargas, clocks, consumo e ventoinhas, com mínimo, máximo e alertas.</li>
+          <li><b>Ficha da placa de vídeo</b>: modelo, chip, memória, driver e sensores em tempo real.</li>
+          <li><b>Bateria</b>: saúde em %, capacidade atual contra a de fábrica e ciclos de carga.</li>
         </ul>
+        <div class="shot group-shot"><img loading="lazy" decoding="async" src="img/app/pt/sensores.webp" alt="Aba Sensores do Iron Check, com temperaturas, cargas e clocks" width="1440" height="900"></div>
       </article>
 
       <article class="group wide">
-        <div class="gh"><span class="n">2</span><h3>Teste cada peça</h3></div>
+        <div class="gh"><h3>Teste cada peça</h3></div>
         <p class="sub">A checagem que você faz depois de trocar uma peça, sem esquecer nenhuma.</p>
         <ul class="feat">
-          <li><b>Discos (HD, SSD SATA e NVMe)</b> — saúde SMART, varredura de superfície só de leitura, desempenho e integridade, com um teste recomendado para cada tipo de unidade.</li>
-          <li><b>Memória RAM e processador</b> — a RAM é testada e os erros contados; o processador dá nota de vários núcleos e de um núcleo e mostra se o desempenho cai com o calor.</li>
-          <li><b>Memory MeoW (memória de vídeo)</b> — grava e confere a memória da placa em 12 padrões, mostra os bits com falha e aponta a causa provável: linha de dados, faixa de células, calor ou tensão.</li>
-          <li><b>Tela</b> — pixels mortos, manchas e vazamento de luz, em cores cheias.</li>
-          <li><b>Teclado e touchpad</b> — tecla por tecla, gesto por gesto. Essencial depois de trocar o teclado ou o touchpad.</li>
-          <li><b>Portas USB</b> — plugue em cada porta e ela aparece na hora, com bip. O programa conta as portas diferentes que você já testou.</li>
-          <li><b>Webcam, alto-falantes e microfone</b> — imagem e resolução; som esquerdo, direito, grave e agudo; e uma barra de captação que sobe quando você bate palmas.</li>
-          <li><b>HDMI e vídeo, carregador, Wi-Fi e Bluetooth</b> — confere a saída de vídeo, se o carregador foi reconhecido e se a rede sem fio responde.</li>
+          <li><b>Discos (HD, SSD SATA e NVMe)</b>: saúde SMART, varredura de superfície só de leitura, desempenho e integridade, com um teste recomendado para cada tipo de unidade.</li>
+          <li><b>Memória RAM e processador</b>: a RAM é testada e os erros contados; o processador dá nota de vários núcleos e de um núcleo e mostra se o desempenho cai com o calor.</li>
+          <li><b>Memory MeoW (memória de vídeo)</b>: grava e confere a memória da placa em 12 padrões, mostra os bits com falha e aponta a causa provável: linha de dados, faixa de células, calor ou tensão.</li>
+          <li><b>Tela</b>: pixels mortos, manchas e vazamento de luz, em cores cheias.</li>
+          <li><b>Teclado e touchpad</b>: tecla por tecla, gesto por gesto. Essencial depois de trocar o teclado ou o touchpad.</li>
+          <li><b>Portas USB</b>: plugue em cada porta e ela aparece na hora, com bip. O programa conta as portas diferentes que você já testou.</li>
+          <li><b>Webcam, alto-falantes e microfone</b>: imagem e resolução; som esquerdo, direito, grave e agudo; e uma barra de captação que sobe quando você bate palmas.</li>
+          <li><b>HDMI e vídeo, carregador, Wi-Fi e Bluetooth</b>: confere a saída de vídeo, se o carregador foi reconhecido e se a rede sem fio responde.</li>
         </ul>
+        <div class="shot group-shot"><img loading="lazy" decoding="async" src="img/app/pt/teclado.webp" alt="Teste de teclado do Iron Check, com as teclas apertadas acesas" width="1440" height="900"></div>
       </article>
 
       <article class="group wide">
-        <div class="gh"><span class="n">3</span><h3>Conserte e deixe pronto</h3></div>
+        <div class="gh"><h3>Conserte e deixe pronto</h3></div>
         <p class="sub">Driver, programas e sistema, sem caçar arquivo na internet.</p>
         <ul class="feat">
-          <li><b>Drivers, rede primeiro</b> — reconhece a placa de rede e instala o driver da biblioteca (Intel, Realtek, MediaTek, Qualcomm/Atheros e Broadcom), sem internet.</li>
-          <li><b>Driver de vídeo NVIDIA</b> — baixa só do servidor oficial, confere a assinatura digital e cria um ponto de restauração antes de instalar.</li>
-          <li><b>Conversores USB-serial e portas COM</b> — CH340, CP210x, FTDI e Prolific: reinstala o driver e libera números de COM travados.</li>
-          <li><b>Instalar apps</b> — Chrome, 7-Zip, WinRAR, VLC e outros essenciais, pelo winget, com um clique.</li>
-          <li><b>Inicialização e Otimiza</b> — liga e desliga o que abre com o Windows (sem apagar nada), limpa a RAM e fecha o que atrapalha. Nunca mexe em segurança.</li>
-          <li><b>Criador de Boot</b> — grava uma ISO do Windows ou do Linux num pendrive UEFI, dividindo arquivos grandes.</li>
-          <li><b>Overclock seguro (NVIDIA)</b> — limite de energia e teto de clock pela via oficial, temporário: volta ao normal ao reiniciar.</li>
+          <li><b>Drivers, rede primeiro</b>: reconhece a placa de rede e instala o driver da biblioteca (Intel, Realtek, MediaTek, Qualcomm/Atheros e Broadcom), sem internet.</li>
+          <li><b>Driver de vídeo NVIDIA</b>: baixa só do servidor oficial, confere a assinatura digital e cria um ponto de restauração antes de instalar.</li>
+          <li><b>Conversores USB-serial e portas COM</b>: CH340, CP210x, FTDI e Prolific: reinstala o driver e libera números de COM travados.</li>
+          <li><b>Instalar apps</b>: Chrome, 7-Zip, WinRAR, VLC e outros essenciais, pelo winget, com um clique.</li>
+          <li><b>Inicialização e Otimiza</b>: liga e desliga o que abre com o Windows (sem apagar nada), limpa a RAM e fecha o que atrapalha. Nunca mexe em segurança.</li>
+          <li><b>Criador de Boot</b>: grava uma ISO do Windows ou do Linux num pendrive UEFI, dividindo arquivos grandes.</li>
+          <li><b>Overclock seguro (NVIDIA)</b>: limite de energia e teto de clock pela via oficial, temporário: volta ao normal ao reiniciar.</li>
         </ul>
+        <div class="shot group-shot"><img loading="lazy" decoding="async" src="img/app/pt/drivers.webp" alt="Aba Drivers do Iron Check" width="1440" height="900"></div>
       </article>
 
       <article class="group">
-        <div class="gh"><span class="n">4</span><h3>Prove que aguenta</h3></div>
+        <div class="gh"><h3>Prove que aguenta</h3></div>
         <p class="sub">Antes de entregar, force o aparelho e veja se ele segura.</p>
         <ul class="feat">
-          <li><b>Stress test</b> — processador, memória e placa de vídeo ao mesmo tempo, com gráfico dos últimos 5 minutos. Para sozinho se passar do limite de temperatura e registra erros de cálculo e de memória.</li>
-          <li><b>Benchmark</b> — 7 testes (render, cena de jogo, ray tracing, DLSS 5, simulação de jogo, memória e disco), com nota para comparar antes e depois do conserto.</li>
-          <li><b>Diagnóstico de rede</b> — diz se o lag vem do Wi-Fi, do provedor ou de fila na conexão, com ping, DNS, velocidade e latência sob carga.</li>
+          <li><b>Stress test</b>: processador, memória e placa de vídeo ao mesmo tempo, com gráfico dos últimos 5 minutos. Para sozinho se passar do limite de temperatura e registra erros de cálculo e de memória.</li>
+          <li><b>Benchmark</b>: 7 testes (render, cena de jogo, ray tracing, DLSS 5, simulação de jogo, memória e disco), com nota para comparar antes e depois do conserto.</li>
+          <li><b>Diagnóstico de rede</b>: diz se o lag vem do Wi-Fi, do provedor ou de fila na conexão, com ping, DNS, velocidade e latência sob carga.</li>
         </ul>
+        <div class="shot group-shot"><img loading="lazy" decoding="async" src="img/app/pt/stress.webp" alt="Stress test do Iron Check, com limites de temperatura e gráfico" width="1440" height="900"></div>
       </article>
 
       <article class="group">
-        <div class="gh"><span class="n">5</span><h3>Entregue com prova</h3></div>
+        <div class="gh"><h3>Entregue com prova</h3></div>
         <p class="sub">É aqui que o cliente enxerga o valor do seu serviço.</p>
         <ul class="feat">
-          <li><b>Laudo técnico em PDF</b> — nome da loja, número da OS, cliente, hardware completo, resultado de cada teste e linhas de assinatura. Sai em português ou em inglês, conforme o idioma da tela.</li>
-          <li><b>Código único em cada laudo</b> — o programa guarda a impressão digital (SHA-256) do arquivo emitido e o botão Conferir mostra se o PDF arquivado foi alterado depois.</li>
-          <li><b>Sua loja já preenchida</b> — o nome da loja fica salvo para os próximos laudos.</li>
+          <li><b>Laudo técnico em PDF</b>: nome da loja, número da OS, cliente, hardware completo, resultado de cada teste e linhas de assinatura. Sai em português ou em inglês, conforme o idioma da tela.</li>
+          <li><b>Código único em cada laudo</b>: o programa guarda a impressão digital (SHA-256) do arquivo emitido e o botão Conferir mostra se o PDF arquivado foi alterado depois.</li>
+          <li><b>Sua loja já preenchida</b>: o nome da loja fica salvo para os próximos laudos.</li>
         </ul>
+        <div class="shot group-shot"><img loading="lazy" decoding="async" src="img/app/pt/relatorio.webp" alt="Aba Relatório do Iron Check, onde se gera o laudo em PDF" width="1440" height="900"></div>
       </article>
     </div>
   </div>
 </section>
 
-<section class="showcase" id="laudo">
+<section class="field-light" id="laudo">
   <div class="wrap laudo">
     <div>
       <div class="paper"><img loading="lazy" decoding="async" src="img/16-laudo.png" alt="Primeira página de um laudo técnico em PDF do Iron Check, com loja, número da OS, resultado geral e a lista de testes" width="794" height="900"></div>
       <p class="paper-cap">Exemplo de laudo gerado pelo programa. Os identificadores do aparelho foram ocultados.</p>
     </div>
     <div>
-      <span class="eyebrow">A prova do seu trabalho</span>
-      <h2>O laudo que faz o cliente confiar em você</h2>
+      <h2>O laudo que gera confiança</h2>
       <p class="lead">Um documento profissional, com o nome da sua loja, que mostra o que foi testado e em que estado o aparelho saiu da sua bancada.</p>
       <ul class="list">
         <li><span><b>Cliente entende o que foi feito.</b> Resultado geral no topo e uma linha por teste: aprovado, atenção ou reprovado.</span></li>
@@ -221,80 +247,18 @@
   </div>
 </section>
 
-<section id="telas">
+<section class="field-deep" id="seguro">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Por dentro</span>
-      <h2>Veja o programa funcionando</h2>
-      <p class="lead">Interface escura e direta, em português e em inglês. Clique em uma tela para ver em tamanho real.</p>
-    </div>
-    <div class="chips" id="chips" role="group" aria-label="Filtrar telas por etapa" hidden>
-      <button class="chip" type="button" data-f="todas" aria-pressed="true">Todas</button>
-      <button class="chip" type="button" data-f="receber" aria-pressed="false">Receber</button>
-      <button class="chip" type="button" data-f="pecas" aria-pressed="false">Testar as peças</button>
-      <button class="chip" type="button" data-f="carga" aria-pressed="false">Aguentar a carga</button>
-      <button class="chip" type="button" data-f="preparar" aria-pressed="false">Consertar e preparar</button>
-      <button class="chip" type="button" data-f="laudo" aria-pressed="false">Entregar</button>
-    </div>
-    <div class="show-grid">
-      <figure data-g="receber"><a href="img/01b-situacao.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/01b-situacao.png" alt="Situação dos testes automáticos, com o veredito de cada teste" width="1440" height="900"></div></a>
-        <figcaption><b>Testes automáticos</b><span>Sistema, processador, memória, disco, Wi-Fi, Bluetooth e drivers em sequência, cada um com o seu veredito.</span></figcaption></figure>
-      <figure data-g="receber"><a href="img/17-ingles.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/17-ingles.png" alt="Tela Sistema do Iron Check em inglês, com o interruptor de idioma de bandeiras no topo" width="1440" height="900"></div></a>
-        <figcaption><b>Português e inglês</b><span>Um interruptor com as bandeiras do Brasil e dos EUA troca a interface, as mensagens e o laudo em PDF de idioma.</span></figcaption></figure>
-      <figure data-g="receber"><a href="img/13-video.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/13-video.png" alt="Ficha da placa de vídeo com especificações e sensores ao vivo" width="1440" height="900"></div></a>
-        <figcaption><b>Placa de vídeo</b><span>Ficha completa e sensores ao vivo: chip, memória, driver, clocks, temperatura e consumo.</span></figcaption></figure>
-      <figure data-g="receber"><a href="img/12-sensores.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/12-sensores.png" alt="Aba Sensores com temperaturas, cargas, clocks, mínimo e máximo" width="1440" height="900"></div></a>
-        <figcaption><b>Sensores</b><span>Temperaturas, cargas, clocks e consumo em tempo real, com mínimo, máximo, filtros e alertas.</span></figcaption></figure>
-
-      <figure data-g="pecas"><a href="img/02-discos.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/02-discos.png" alt="Aba Discos com os testes recomendados para HD, SSD SATA e NVMe" width="1440" height="900"></div></a>
-        <figcaption><b>Discos</b><span>Um teste recomendado para cada tipo de unidade: SMART, superfície só de leitura, desempenho e integridade.</span></figcaption></figure>
-      <figure data-g="pecas"><a href="img/09-teclado.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/09-teclado.png" alt="Teste de teclado com as teclas acendendo conforme são apertadas" width="1440" height="900"></div></a>
-        <figcaption><b>Teclado</b><span>Cada tecla acende ao ser apertada. As que não respondem ficam apagadas.</span></figcaption></figure>
-      <figure data-g="pecas"><a href="img/11-usb.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/11-usb.png" alt="Aba Portas USB com os dispositivos conectados e a contagem de portas testadas" width="1440" height="900"></div></a>
-        <figcaption><b>Portas USB</b><span>Plugue em cada porta e veja na hora, com bip. O programa conta as portas diferentes testadas.</span></figcaption></figure>
-      <figure data-g="pecas"><a href="img/10-microfone.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/10-microfone.png" alt="Teste de microfone com a barra de captação de som e o aviso de som forte detectado" width="1440" height="900"></div></a>
-        <figcaption><b>Microfone</b><span>Bata palmas e veja a barra de captação subir. Mede o ruído de fundo e grava 4 segundos para você ouvir.</span></figcaption></figure>
-
-      <figure data-g="carga"><a href="img/14-stress.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/14-stress.png" alt="Aba Stress test com processador, memória e placa de vídeo, limites de temperatura e gráfico" width="1440" height="900"></div></a>
-        <figcaption><b>Stress test</b><span>Processador, memória e placa de vídeo juntos, com corte automático por temperatura e gráfico dos últimos 5 minutos.</span></figcaption></figure>
-      <figure data-g="carga"><a href="img/03-benchmark.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/03-benchmark.png" alt="Aba Benchmark com a animação do chip e as opções de teste" width="1440" height="900"></div></a>
-        <figcaption><b>Benchmark</b><span>Sete testes, cada um com a sua animação, e notas para comparar antes e depois do conserto.</span></figcaption></figure>
-      <figure data-g="carga"><a href="img/04-memory-meow.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/04-memory-meow.png" alt="Aba Memory MeoW com os dados da memória de vídeo da placa" width="1440" height="900"></div></a>
-        <figcaption><b>Memory MeoW</b><span>Lê o modelo, o barramento e o fabricante da memória da placa e procura defeitos na VRAM.</span></figcaption></figure>
-
-      <figure data-g="preparar"><a href="img/06-drivers.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/06-drivers.png" alt="Aba Drivers com verificação da placa de rede, da placa de vídeo e do fabricante" width="1440" height="900"></div></a>
-        <figcaption><b>Drivers</b><span>Primeiro a rede, depois vídeo, placa-mãe e o que faltar pelo Windows Update.</span></figcaption></figure>
-      <figure data-g="preparar"><a href="img/15-apps.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/15-apps.png" alt="Aba Instalar apps com os programas essenciais para depois de formatar" width="1440" height="900"></div></a>
-        <figcaption><b>Instalar apps</b><span>Os essenciais depois de formatar (Chrome, 7-Zip, WinRAR, VLC e outros), com um clique, pelo winget.</span></figcaption></figure>
-      <figure data-g="preparar"><a href="img/07-boot.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/07-boot.png" alt="Aba Criador de Boot para gravar ISO em pendrive" width="1440" height="900"></div></a>
-        <figcaption><b>Criador de Boot</b><span>Pendrive bootável (UEFI) de ISO do Windows ou do Linux, com divisão automática de arquivos grandes.</span></figcaption></figure>
-      <figure data-g="preparar"><a href="img/05-overclock.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/05-overclock.png" alt="Aba Overclock com limite de energia, teto de clock e verificador de estabilidade" width="1440" height="900"></div></a>
-        <figcaption><b>Overclock</b><span>Ajustes temporários e oficiais da placa NVIDIA, com verificador de estabilidade e aviso de risco.</span></figcaption></figure>
-
-      <figure data-g="laudo"><a href="img/08-relatorio.png" target="_blank" rel="noopener"><div class="shot"><img loading="lazy" decoding="async" src="img/08-relatorio.png" alt="Aba Relatório para gerar o laudo em PDF com loja, número da OS e cliente" width="1440" height="900"></div></a>
-        <figcaption><b>Relatório</b><span>Loja, OS e cliente, o resultado de todos os testes e o botão que gera o PDF.</span></figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<section class="showcase" id="seguro">
-  <div class="wrap">
-    <div class="center">
-      <span class="eyebrow">Segurança</span>
-      <h2>Feito para mexer em aparelho de cliente sem susto</h2>
+      <h2>Aparelho de cliente, sem susto</h2>
       <p class="lead">Você trabalha com o computador dos outros. O Iron Check foi desenhado para não ser o motivo de uma dor de cabeça.</p>
     </div>
     <div class="grid cards trust">
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="18" height="4" rx="1"/><path d="M7 12h.01"/></svg></div>
-        <h3>Teste de disco que não estraga nada</h3><p>A varredura de superfície só lê. O teste de desempenho usa um arquivo temporário e apaga no final. Nenhum teste grava no disco bruto.</p></article>
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
-        <h3>Pendrive de boot sem acidente</h3><p>O Criador de Boot só enxerga pendrives USB e confere o alvo de novo antes de formatar. Nunca toca no disco do sistema.</p></article>
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6"/><path d="M21 17a9 9 0 0 0-15-6.7L3 13"/></svg></div>
-        <h3>Mudanças que voltam</h3><p>O overclock é temporário e usa só os controles oficiais da NVIDIA. Os ajustes de jogo guardam o valor original. O driver de vídeo ganha ponto de restauração antes.</p></article>
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-        <h3>Só fontes oficiais</h3><p>Os drivers vêm de pacotes oficiais dos fabricantes. O de vídeo é baixado só de servidores da NVIDIA, com a assinatura digital conferida.</p></article>
-      <article class="card"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
-        <h3>Licença que nunca apaga nada</h3><p>Se a licença não puder ser confirmada, o programa apenas trava até regularizar. O bloqueio nunca apaga arquivos, nem do seu computador nem do computador do cliente.</p></article>
+      <article class="card"><h3>Teste de disco que não estraga nada</h3><p>A varredura de superfície só lê. O teste de desempenho usa um arquivo temporário e apaga no final. Nenhum teste grava no disco bruto.</p></article>
+      <article class="card"><h3>Pendrive de boot sem acidente</h3><p>O Criador de Boot só enxerga pendrives USB e confere o alvo de novo antes de formatar. Nunca toca no disco do sistema.</p></article>
+      <article class="card"><h3>Mudanças que voltam</h3><p>O overclock é temporário e usa só os controles oficiais da NVIDIA. Os ajustes de jogo guardam o valor original. O driver de vídeo ganha ponto de restauração antes.</p></article>
+      <article class="card"><h3>Só fontes oficiais</h3><p>Os drivers vêm de pacotes oficiais dos fabricantes. O de vídeo é baixado só de servidores da NVIDIA, com a assinatura digital conferida.</p></article>
+      <article class="card"><h3>Licença que nunca apaga nada</h3><p>Se a licença não puder ser confirmada, o programa apenas trava até regularizar. O bloqueio nunca apaga arquivos, nem do seu computador nem do computador do cliente.</p></article>
     </div>
   </div>
 </section>
@@ -302,8 +266,7 @@
 <section id="como">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Como funciona</span>
-      <h2>Do pedido ao primeiro laudo em minutos</h2>
+      <h2>Do pedido ao laudo em minutos</h2>
     </div>
     <div class="grid steps">
       <div class="step"><h3>Peça sua chave</h3><p>Chame no WhatsApp. Você recebe uma <b>chave de teste</b> com poucos dias de uso, ou a chave de assinante depois do pagamento por Pix.</p></div>
@@ -317,8 +280,7 @@
 <section class="showcase" id="semrede">
   <div class="wrap offline">
     <div>
-      <span class="eyebrow">Computador sem rede?</span>
-      <h2>O driver da placa de rede já vem no kit</h2>
+      <h2>O driver de rede vem no kit</h2>
       <p class="lead" style="margin-bottom:0">A chave é conferida pela internet. Se o computador ainda não tem rede, a própria tela de ativação oferece a aba <b>Drivers</b>, e só ela.</p>
       <ul class="list">
         <li><span><b>Reconhece a placa de rede</b> e instala o driver certo da pasta <b>drivers</b>, que fica ao lado do programa. Sem internet.</span></li>
@@ -326,20 +288,18 @@
         <li><span><b>Acrescente os seus.</b> Quer um driver que não está na biblioteca? Crie uma subpasta com o driver e um manifesto, e ele aparece na aba Drivers.</span></li>
       </ul>
     </div>
-    <div class="shot"><div class="chrome"><i></i><i></i><i></i></div><img loading="lazy" decoding="async" src="img/06-drivers.png" alt="Aba Drivers do Iron Check" width="1440" height="900"></div>
+    <div class="shot"><div class="chrome"><i></i><i></i><i></i></div><img loading="lazy" decoding="async" src="img/app/pt/drivers.webp" alt="Aba Drivers do Iron Check" width="1440" height="900"></div>
   </div>
 </section>
 
 <section id="oferta">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Teste e assinatura</span>
-      <h2>Teste primeiro. Assine só se valer a pena.</h2>
+      <h2>Teste primeiro, assine depois</h2>
       <p class="lead">Use o Iron Check em aparelhos de verdade, na sua bancada, e decida depois.</p>
     </div>
     <div class="offer">
       <article class="plan main">
-        <span class="kicker">Para começar</span>
         <h3>Chave de teste</h3>
         <ul class="list">
           <li><span>O programa <b>completo</b>, sem recursos escondidos.</span></li>
@@ -352,7 +312,6 @@
         </a>
       </article>
       <article class="plan">
-        <span class="kicker">Para o dia a dia</span>
         <h3>Assinatura mensal</h3>
         <ul class="list">
           <li><span><b>Uma chave</b> para usar em todos os computadores que você atender.</span></li>
@@ -365,16 +324,14 @@
   </div>
 </section>
 
-<section class="showcase" id="baixar">
+<section class="field-mid" id="baixar">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Download</span>
       <h2>Baixe o Iron Check</h2>
       <p class="lead">Windows 10 ou 11, 64 bits. Para liberar o programa você precisa de uma chave: peça a de teste no WhatsApp.</p>
     </div>
     <div class="offer">
       <article class="plan main">
-        <span class="kicker">Recomendado</span>
         <h3>Kit completo</h3>
         <ul class="list">
           <li><span>O <b>programa</b> (Iron-Check-Portatil.exe).</span></li>
@@ -388,7 +345,6 @@
         </a>
       </article>
       <article class="plan">
-        <span class="kicker">Para experimentar</span>
         <h3>Só o programa</h3>
         <ul class="list">
           <li><span>Um arquivo de <b>92 MB</b> que abre sozinho.</span></li>
@@ -408,7 +364,6 @@
 <section id="faq">
   <div class="wrap">
     <div class="center">
-      <span class="eyebrow">Dúvidas</span>
       <h2>Perguntas frequentes</h2>
     </div>
     <div class="faq">
@@ -432,8 +387,7 @@
 
 <section class="final">
   <div class="wrap">
-    <span class="eyebrow">Pronto para entregar com laudo?</span>
-    <h2>Receba sua chave de teste e rode no próximo aparelho</h2>
+    <h2>Rode no seu próximo aparelho</h2>
     <p class="lead" style="margin-inline:auto">Atendimento direto com o desenvolvedor. Tire dúvidas, peça a chave e comece hoje.</p>
     <div class="cta">
       <a class="btn btn-wa" href="https://wa.me/5521966547296?text=Ol%C3%A1!%20Quero%20uma%20chave%20de%20teste%20do%20Iron%20Check." target="_blank" rel="noopener">
@@ -458,34 +412,7 @@
   <svg aria-hidden="true"><use href="#i-wa"/></svg>
 </a>
 
-<script>
-(function () {
-  var sw = document.getElementById('lang-sw');
-  if (sw) sw.addEventListener('click', function (e) {
-    try { localStorage.setItem('ic-lang', sw.getAttribute('data-to')); } catch (x) { /* sem armazenamento */ }
-    if (e.ctrlKey || e.metaKey || e.shiftKey || e.button) return;
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    e.preventDefault(); sw.classList.add('vai');
-    setTimeout(function () { location.href = sw.getAttribute('href'); }, 380);
-  });
-})();
-(function () {
-  var bar = document.getElementById('chips');
-  if (!bar) return;
-  var grid = document.querySelector('.show-grid');
-  var figs = [].slice.call(document.querySelectorAll('.show-grid figure'));
-  var btns = [].slice.call(bar.querySelectorAll('button'));
-  bar.hidden = false;
-  btns.forEach(function (b) {
-    b.addEventListener('click', function () {
-      var f = b.getAttribute('data-f');
-      btns.forEach(function (x) { x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
-      figs.forEach(function (fg) { fg.hidden = f !== 'todas' && fg.getAttribute('data-g') !== f; });
-      grid.classList.toggle('big', f !== 'todas');
-    });
-  });
-})();
-</script>
+<script type="module" src="js/main.js"></script>
 
 </body>
 </html>

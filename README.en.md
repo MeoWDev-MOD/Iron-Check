@@ -20,7 +20,7 @@
 ---
 
 <p align="center">
-  <img src="docs/img/en/01-sistema.png" alt="Iron Check System screen" width="900">
+  <img src="docs/img/app/en/sistema.webp" alt="Iron Check System screen" width="900">
 </p>
 
 ## 🐺 What it is
@@ -95,19 +95,19 @@ A device that comes back costs time, money and a customer. Iron Check was made s
 
 | | |
 |:---:|:---:|
-| ![Automatic tests](docs/img/en/01b-situacao.png) | ![Sensors](docs/img/en/12-sensores.png) |
+| ![Automatic tests](docs/img/app/en/situacao.webp) | ![Sensors](docs/img/app/en/sensores.webp) |
 | **Automatic tests** — each test with its verdict | **Sensors** — live temperatures, loads and power draw |
-| ![In Portuguese](docs/img/01-sistema.png) | |
+| ![In Portuguese](docs/img/app/pt/sistema.webp) | |
 | **English and Portuguese** — one click, report included (here, the same screen in Portuguese) | |
-| ![Disks](docs/img/en/02-discos.png) | ![Keyboard](docs/img/en/09-teclado.png) |
+| ![Disks](docs/img/app/en/disco.webp) | ![Keyboard](docs/img/app/en/teclado.webp) |
 | **Disks** — SMART, surface, performance and integrity | **Keyboard** — each key lights up when pressed |
-| ![USB ports](docs/img/en/11-usb.png) | ![Microphone](docs/img/en/10-microfone.png) |
+| ![USB ports](docs/img/app/en/usb.webp) | ![Microphone](docs/img/app/en/microfone.webp) |
 | **USB ports** — plug in and see it instantly | **Microphone** — clap and watch the bar rise |
-| ![Stress test](docs/img/en/14-stress.png) | ![Benchmark](docs/img/en/03-benchmark.png) |
+| ![Stress test](docs/img/app/en/stress.webp) | ![Benchmark](docs/img/app/en/benchmark.webp) |
 | **Stress test** — CPU, RAM and GPU with temperature cut-off | **Benchmark** — 7 tests with a score |
-| ![Memory MeoW](docs/img/en/04-memory-meow.png) | ![Drivers](docs/img/en/06-drivers.png) |
+| ![Memory MeoW](docs/img/app/en/memorymeow.webp) | ![Drivers](docs/img/app/en/drivers.webp) |
 | **Memory MeoW** — looks for faults in the video memory | **Drivers** — network first, then video and the rest |
-| ![Report](docs/img/en/08-relatorio.png) | ![Boot Creator](docs/img/en/07-boot.png) |
+| ![Report](docs/img/app/en/relatorio.webp) | ![Boot Creator](docs/img/app/en/bootcreator.webp) |
 | **Report** — shop, service order and the PDF button | **Boot Creator** — bootable USB stick from a Windows or Linux ISO |
 
 ---
