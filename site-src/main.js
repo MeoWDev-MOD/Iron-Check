@@ -18,7 +18,7 @@ const t = (p, k) => p[k][lang];
 // ---------- Rolagem suave ----------
 let lenis = null;
 if (!still) {
-  lenis = new Lenis({ lerp: 0.12, anchors: { offset: -64 } });
+  lenis = new Lenis({ lerp: 0.12, anchors: { offset: -64, duration: 1.15, easing: (x) => 1 - Math.pow(1 - x, 4) } });
   lenis.on("scroll", ScrollTrigger.update);
   gsap.ticker.add((time) => lenis.raf(time * 1000));
   gsap.ticker.lagSmoothing(0);
@@ -109,14 +109,17 @@ function swapImage(url, alt, instant) {
     a.src = url;
     return;
   }
+  // A foto é decodificada antes da troca: decodificar no meio da animação dava um engasgo.
   const next = new Image();
-  next.onload = () => {
-    if (a.getAttribute("data-want") !== url) return; // outra tela foi pedida enquanto esta carregava
-    b.src = next.src;
-    gsap.killTweensOf(b);
-    gsap.fromTo(b, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.28, ease: "power2.out", onComplete: () => { a.src = next.src; gsap.set(b, { opacity: 0 }); } });
-  };
   next.src = url;
+  (next.decode ? next.decode() : new Promise((ok) => (next.onload = ok)))
+    .catch(() => {})
+    .then(() => {
+      if (a.getAttribute("data-want") !== url) return; // outra tela foi pedida enquanto esta carregava
+      b.src = next.src;
+      gsap.killTweensOf(b);
+      gsap.fromTo(b, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.28, ease: "power2.out", onComplete: () => { a.src = next.src; gsap.set(b, { opacity: 0 }); } });
+    });
 }
 
 function show(id, opts = {}) {
@@ -173,12 +176,14 @@ function switchLang() {
   }, 1300);
 }
 
+// Atalhos em forma de tecla, numerados como as teclas F do notebook.
 function buildChips() {
   if (!chipsBox) return;
-  for (const id of CHIPS) {
+  for (const [i, id] of CHIPS.entries()) {
     const b = document.createElement("button");
     b.type = "button";
     b.dataset.id = id;
+    b.dataset.key = `F${i + 1}`;
     b.textContent = t(byId[id], "title");
     b.setAttribute("aria-pressed", String(id === current));
     b.addEventListener("click", () => {
@@ -223,7 +228,11 @@ if (stage) {
     }
   })();
   if (still || !gl) flatScreen();
-  else start3d().catch(() => flatScreen());
+  else
+    start3d().catch((err) => {
+      console.error("Notebook 3D não abriu, ficou a tela plana:", err); // aparece no teste em vez de passar calado
+      flatScreen();
+    });
   new IntersectionObserver(([en]) => {
     stageVisible = en.isIntersecting;
     syncVideo();
@@ -231,19 +240,29 @@ if (stage) {
 }
 
 // No celular, o botão do WhatsApp sairia por cima dos atalhos do notebook: ele some só enquanto o notebook está aberto.
-// O vídeo do Benchmark para quando a tela apaga (tampa fechando) e volta quando ela acende.
+// Conferido só na rolagem e sem ler o estilo calculado (ler a cada quadro forçava o navegador a recalcular a página).
 const fab = document.querySelector(".fab");
+if (stage && fab) {
+  const placeFab = () => {
+    if (innerWidth >= 760) {
+      if (fab.style.visibility) fab.style.visibility = "";
+      return;
+    }
+    const r = stage.getBoundingClientRect();
+    const on = stage.classList.contains("is-open") && r.top <= 0 && r.bottom > innerHeight * 0.6;
+    fab.style.visibility = on ? "hidden" : "";
+  };
+  addEventListener("scroll", placeFab, { passive: true });
+  addEventListener("resize", placeFab);
+}
+// O vídeo do Benchmark para quando a tela apaga (tampa fechando) e volta quando ela acende.
 if (stage) {
-  const nav = stage.querySelector(".nb-nav");
   let lastVis = "";
   gsap.ticker.add(() => {
     if (screenEl && screenEl.style.visibility !== lastVis) {
       lastVis = screenEl.style.visibility;
       syncVideo();
     }
-    if (!fab) return;
-    const on = getComputedStyle(nav).visibility === "visible" && Number(getComputedStyle(nav).opacity) > 0.1 && stage.getBoundingClientRect().bottom > innerHeight * 0.6 && stage.getBoundingClientRect().top <= 0 && innerWidth < 760;
-    fab.style.visibility = on ? "hidden" : "";
   });
 }
 
@@ -268,10 +287,34 @@ if (pixels) {
     .catch(() => pixels.classList.add("is-flat"));
 }
 
+// ---------- Blocos visuais: o vídeo só baixa e toca com o bloco na tela; a foto aproxima devagar ao aparecer ----------
+document.querySelectorAll(".tile").forEach((tile) => {
+  const v = tile.querySelector("video");
+  new IntersectionObserver(
+    ([en]) => {
+      tile.classList.toggle("is-in", en.isIntersecting);
+      if (!v || still) return;
+      if (en.isIntersecting) {
+        if (!v.getAttribute("src")) v.src = v.dataset.src;
+        v.play().catch(() => {});
+      } else v.pause();
+    },
+    { threshold: 0.35 },
+  ).observe(tile);
+});
+
+// ---------- Como funciona e laudo: a linha dos passos se desenha com a rolagem e o selo bate no papel ----------
+if (!still) {
+  const line = document.querySelector(".flow-line");
+  if (line) gsap.fromTo(line, { scaleX: 0 }, { scaleX: 1, ease: "none", scrollTrigger: { trigger: ".flow", start: "top 78%", end: "bottom 58%", scrub: 0.4 } });
+  const stamp = document.querySelector(".stamp");
+  if (stamp) gsap.from(stamp, { scale: 1.4, rotate: -26, opacity: 0, duration: 0.5, ease: "back.out(2)", scrollTrigger: { trigger: stamp, start: "top 78%", once: true } });
+}
+
 // ---------- Entradas de seção: nada fica escondido sem script, porque só o script esconde ----------
 if (!still) {
   document.querySelectorAll("main > section:not(.nb-stage):not(#pixels)").forEach((section) => {
-    const parts = section.querySelectorAll("h2, .lead, .card, .group, .step, .plan, details, .paper, .shot, .compare tbody tr, .list li");
+    const parts = section.querySelectorAll("h2, .lead, .tile, .safe li, .flow li, .dl-item, details, .paper-wrap, .ticks li, .cta");
     if (!parts.length) return;
     gsap.set(parts, { opacity: 0, y: 22 });
     ScrollTrigger.batch(parts, {

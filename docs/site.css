@@ -54,7 +54,7 @@ nav .short{display:none}
 .cta{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0 14px}
 
 /* Notebook */
-.nb-stage{position:relative;height:420vh;padding:0!important;background:var(--bg)}
+.nb-stage{position:relative;height:250vh;padding:0!important;background:var(--bg)}
 .nb-pin{position:sticky;top:0;height:100vh;height:100dvh;overflow:hidden}
 .nb-gl{position:absolute;inset:0;width:100%;height:100%;display:block}
 .nb-css{position:absolute;inset:0;pointer-events:none;overflow:hidden}
@@ -67,17 +67,22 @@ nav .short{display:none}
 @media (max-width:760px){.nb-copy .fine{display:none}.nb-copy .lead{font-size:.98rem;line-height:1.45;margin-bottom:.6em}.nb-copy .cta{margin:12px 0 0;gap:8px}.nb-copy .btn{min-height:42px;padding:9px 16px;font-size:.92rem}.nb-copy .btn-ghost:not(.nb-open){display:none}}
 .nb-flat{display:none}
 .nb-nav{position:absolute;z-index:3;inset:auto 0 0;padding:12px max(14px,calc((100% - 1240px)/2)) 14px;background:var(--bg);display:grid;gap:8px}
+/* O teclado se dissolve na faixa de baixo, em vez de ser cortado por uma linha reta */
+.nb-nav::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:64px;background:linear-gradient(to bottom,rgba(19,10,46,0),var(--bg));pointer-events:none}
 .nb-caption{margin:0;font-size:clamp(.95rem,1.3vw,1.1rem);min-height:1.7em;text-wrap:balance}
 .nb-caption b{font-family:Sora,sans-serif;margin-right:8px}
 .nb-caption span{color:var(--muted)}
-.nb-chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding:2px}
+.nb-chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:2px 2px 10px}
 .nb-chips::-webkit-scrollbar{display:none}
-.nb-chips button{flex:none;min-height:38px;padding:6px 15px;border:0;border-radius:999px;background:var(--deep);color:var(--text);font:600 .92rem "Segoe UI",system-ui,sans-serif;cursor:pointer;transition:background-color .15s ease,transform .16s var(--ease)}
-.nb-chips button:hover{background:var(--mid)}
-.nb-chips button:active{transform:scale(.96)}
-.nb-chips button[aria-pressed="true"]{background:var(--pale);color:var(--ink-dark)}
+/* Atalhos no formato de tecla (F1 a F12): afundam ao clicar e a tela aberta fica com a tecla acesa */
+.nb-chips button,.px-swatches button{position:relative;flex:none;display:inline-flex;align-items:flex-end;min-height:50px;padding:19px 14px 7px;border:0;border-radius:10px;background:linear-gradient(180deg,#2c2934,#16141b);color:#ece8f6;font:600 .86rem "Segoe UI",system-ui,sans-serif;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.14),inset 0 -2px 0 rgba(0,0,0,.5),0 4px 0 #09080c,0 7px 14px rgba(0,0,0,.45);transition:transform .1s var(--ease),box-shadow .1s var(--ease),filter .15s ease}
+.nb-chips button::before{content:attr(data-key);position:absolute;top:6px;right:10px;font:600 .66rem "Segoe UI",system-ui,sans-serif;color:rgba(236,232,246,.55)}
+@media (hover:hover) and (pointer:fine){.nb-chips button:hover,.px-swatches button:hover{filter:brightness(1.3)}}
+.nb-chips button:active,.px-swatches button:active{transform:translateY(3px);box-shadow:inset 0 1px 0 rgba(255,255,255,.1),inset 0 -1px 0 rgba(0,0,0,.45),0 1px 0 #09080c,0 2px 5px rgba(0,0,0,.4)}
+.nb-chips button[aria-pressed="true"],.px-swatches button[aria-pressed="true"]{background:linear-gradient(180deg,#8a5cf5,#6631db);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.35),inset 0 -2px 0 rgba(0,0,0,.3),0 4px 0 #34117e,0 0 24px rgba(169,129,255,.6)}
+.nb-chips button[aria-pressed="true"]::before{color:rgba(255,255,255,.85)}
 .nb-hint{margin:0;font-size:.86rem;color:var(--muted)}
-@media (max-width:760px){.nb-hint{display:none}.nb-stage{height:340vh}}
+@media (max-width:760px){.nb-hint{display:none}.nb-stage{height:230vh}}
 .ic-screen{position:relative;background:#130a2e;overflow:hidden;user-select:none;border-radius:0 0 7px 7px}
 .ic-screen img{position:absolute;inset:0;width:100%;height:100%;max-width:none}
 .ic-b{opacity:0}
@@ -112,7 +117,7 @@ nav .short{display:none}
 .nb-stage.is-flat .ic-screen{transform-origin:0 0}
 
 /* Números */
-.numbers{padding:clamp(56px,8vw,96px) 0!important;background:var(--deep)}
+.numbers{padding:clamp(56px,8vw,96px) 0!important;background:linear-gradient(var(--bg),var(--deep) clamp(90px,10vw,150px))}
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
 .stats b{display:block;font:800 clamp(2.2rem,5vw,4.2rem)/1 Sora,sans-serif;letter-spacing:-.03em;color:var(--pale)}
 .stats span{display:block;margin-top:8px;color:var(--text)}
@@ -127,16 +132,17 @@ nav .short{display:none}
 .px-ring{border:2px solid var(--pale);border-radius:50%;box-shadow:0 0 18px rgba(169,129,255,.55)}
 .px-found{padding:6px 14px;border-radius:999px;background:var(--bg);color:var(--text);font:700 .95rem Sora,sans-serif;white-space:nowrap}
 .px-stage.is-found .px-ring,.px-stage.is-found .px-found{opacity:1}
+/* O painel nasce do roxo de cima e se dissolve no fundo de baixo (a opacidade acompanha a rolagem, em pixels.js) */
+.px-fade{position:absolute;left:0;right:0;z-index:1;height:38vh;pointer-events:none}
+.px-fade-top{top:0;background:linear-gradient(var(--deep),rgba(52,17,126,0))}
+.px-fade-bottom{bottom:0;background:linear-gradient(rgba(19,10,46,0),var(--bg));opacity:0}
 .px-copy{position:relative;z-index:2;width:min(620px,100% - 28px);margin:0 0 clamp(14px,4vh,40px) clamp(14px,4vw,56px);padding:clamp(20px,3vw,34px);background:var(--bg);border-radius:20px}
 .px-copy h2{font-size:clamp(1.55rem,3.2vw,2.7rem)}
 .px-copy p{margin-bottom:.8em}
 .px-note{font-size:.88rem;color:var(--muted);margin:10px 0 0!important}
-.px-swatches{display:flex;flex-wrap:wrap;gap:6px}
-.px-swatches button{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:6px 13px 6px 8px;border:0;border-radius:999px;background:var(--deep);color:var(--text);font:600 .92rem "Segoe UI",system-ui,sans-serif;cursor:pointer;transition:background-color .15s ease,transform .16s var(--ease)}
-.px-swatches button:hover{background:var(--mid)}
-.px-swatches button:active{transform:scale(.96)}
-.px-swatches button[aria-pressed="true"]{background:var(--pale);color:var(--ink-dark)}
-.px-swatches i{width:22px;height:22px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.px-swatches{display:flex;flex-wrap:wrap;gap:8px 8px;padding-bottom:6px}
+.px-swatches button{min-width:86px;padding-right:30px}
+.px-swatches i{position:absolute;top:7px;right:9px;width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(255,255,255,.4)}
 .px-stage:not(.is-live) .px-gl{background:repeating-linear-gradient(90deg,#c00 0 6px,#0a0 6px 12px,#00c 12px 18px,#000 18px 20px)}
 .px-stage.is-flat,.px-stage:not(.is-live){height:auto}
 .px-stage:not(.is-live) .px-found,.px-stage:not(.is-live) .px-ring{display:none}
@@ -233,6 +239,87 @@ nav .short{display:none}
 .final .btn-wa:hover{background:var(--pale)}
 .final .btn-ghost{background:var(--deep)}
 footer{background:var(--bg);padding:26px 0 96px;font-size:.92rem;color:var(--muted)}
+/* Seções de outra cor chegam como folhas por cima da anterior: cantos redondos e sombra no lugar do corte reto */
+.field-light,.field-deep,#como,.field-mid,#faq,.final,footer{--sheet:clamp(26px,4vw,56px);position:relative;z-index:1;margin-top:calc(-1 * var(--sheet));border-radius:var(--sheet) var(--sheet) 0 0;box-shadow:0 -28px 60px -30px rgba(0,0,0,.55)}
+#como,#faq{background:var(--bg)}
+/* Trocar de idioma vira uma passagem suave entre as duas páginas (transição nativa do navegador, sem biblioteca) */
+@media (prefers-reduced-motion:no-preference){@view-transition{navigation:auto}}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.42s;animation-timing-function:cubic-bezier(.23,1,.32,1)}
+
+/* Recursos em blocos visuais: a animação ou a tela do programa e uma frase, no lugar das listas longas */
+.tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,2vw,26px);margin-top:clamp(32px,4vw,56px)}
+@media (max-width:980px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.tiles{grid-template-columns:minmax(0,1fr)}}
+.tile{display:flex;flex-direction:column;gap:6px;padding:12px 12px 22px;border-radius:22px;background:var(--bg-2);transition:transform .25s var(--ease),background-color .2s ease}
+@media (hover:hover) and (pointer:fine){.tile:hover{transform:translateY(-4px);background:#24135a}}
+.tile-media{position:relative;overflow:hidden;aspect-ratio:16/10;border-radius:14px;background:#0d0622;margin-bottom:12px}
+.tile-media img,.tile-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;max-width:none}
+.tile-media video{object-fit:contain}
+.tile h3{margin:0 8px;font-size:clamp(1.15rem,1.6vw,1.35rem);color:var(--pale)}
+.tile p{margin:0 8px;color:var(--text);font-size:.98rem}
+.kb{transform-origin:22% 28%}
+.tile.is-in .kb{animation:kb 9s cubic-bezier(.23,1,.32,1) both}
+@keyframes kb{from{transform:scale(1.02)}to{transform:scale(1.16) translate(-2%,-1.5%)}}
+.tile-pill{position:absolute;left:12px;right:12px;bottom:12px;display:flex;align-items:center;padding:9px 14px;border-radius:999px;background:rgba(19,10,46,.88);font:600 .82rem "Segoe UI",system-ui,sans-serif;color:var(--text);overflow:hidden}
+.tile-pill i{position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--soft);transform:scaleX(0);transform-origin:0 50%}
+.tile.is-in .tile-pill i{animation:pill 3.4s cubic-bezier(.4,0,.2,1) infinite}
+@keyframes pill{0%{transform:scaleX(0);opacity:1}70%{transform:scaleX(1);opacity:1}100%{transform:scaleX(1);opacity:0}}
+
+/* Laudo: o selo de aprovado bate no papel quando ele aparece */
+.paper-wrap{position:relative}
+.stamp{position:absolute;right:3%;top:16%;padding:8px 18px;border:4px solid #6631db;border-radius:12px;background:rgba(255,255,255,.88);color:#6631db;font:800 clamp(1rem,1.9vw,1.5rem) Sora,sans-serif;letter-spacing:.1em;text-transform:uppercase;transform:rotate(-12deg);box-shadow:0 8px 20px rgba(24,10,68,.22)}
+@media (max-width:620px){.stamp{right:4%;padding:6px 12px;font-size:.95rem;border-width:3px}}
+/* Nada que passe da borda (o selo antes de bater, a sombra das folhas) alarga a página no celular. "clip" não quebra o sticky. */
+main{overflow-x:clip}
+.ticks{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:12px}
+.ticks li{position:relative;padding-left:34px;font-weight:600;color:var(--ink-dark)}
+.ticks li::before{content:"";position:absolute;left:0;top:.15em;width:22px;height:22px;border-radius:50%;background:#34117e url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 6.3 5 8.6 9.6 3.6' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/13px no-repeat}
+
+/* Segurança em quatro ícones */
+.safe{list-style:none;margin:clamp(28px,4vw,48px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(14px,2vw,24px)}
+@media (max-width:900px){.safe{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.safe{grid-template-columns:minmax(0,1fr)}}
+.safe li{display:grid;align-content:start;gap:6px;padding:22px;border-radius:18px;background:rgba(19,10,46,.38)}
+.safe svg{width:34px;height:34px;color:var(--pale);margin-bottom:6px}
+.safe b{font:700 1.12rem Sora,sans-serif;color:#fff}
+.safe span{color:var(--text);font-size:.96rem}
+
+/* Como funciona: três passos ligados por uma linha que se desenha com a rolagem */
+.flow{--g:clamp(18px,3vw,40px);position:relative;margin-top:clamp(32px,4vw,56px)}
+.flow ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--g)}
+.flow li b{position:relative;z-index:1;display:grid;place-items:center;width:56px;height:56px;margin-bottom:16px;border-radius:50%;background:var(--bright);color:#fff;font:800 1.3rem Sora,sans-serif;box-shadow:0 0 0 8px var(--bg)}
+.flow li h3{margin:0 0 6px;font-size:clamp(1.2rem,1.8vw,1.5rem);color:var(--pale)}
+.flow li p{margin:0;color:var(--text)}
+.flow-line{position:absolute;left:28px;right:calc((100% - 2 * var(--g)) / 3 - 28px);top:27px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--bright),var(--soft));transform-origin:0 50%}
+@media (max-width:720px){.flow ol{grid-template-columns:minmax(0,1fr)}.flow-line{display:none}}
+
+/* Baixar: os dois arquivos em botões grandes */
+.dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:26px 0 18px}
+@media (max-width:720px){.dl{grid-template-columns:minmax(0,1fr)}}
+.dl-item{display:flex;align-items:center;gap:16px;padding:18px 22px;border-radius:18px;background:rgba(19,10,46,.42);color:var(--text);text-decoration:none;transition:transform .2s var(--ease),background-color .15s ease}
+.dl-item.main{background:var(--pale);color:var(--ink-dark)}
+.dl-item svg{width:30px;height:30px;flex:none}
+.dl-item b{display:block;font:700 1.08rem Sora,sans-serif}
+.dl-item small{display:block;font-size:.88rem;opacity:.85}
+@media (hover:hover) and (pointer:fine){.dl-item:hover{transform:translateY(-2px);background:rgba(19,10,46,.62)}.dl-item.main:hover{background:#fff}}
+.dl-item:active{transform:scale(.98)}
+
+/* Redes no rodapé (botões do Uiverse, de wilsondesouza): a cor da rede sobe por dentro e o nome aparece em cima */
+.socials{list-style:none;width:100%;margin:0 0 6px;padding:8px 0 0;display:flex;justify-content:center;gap:14px}
+.socials li{position:relative}
+.socials a{position:relative;overflow:hidden;display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:#fff;color:#2b2b33;transition:color .3s ease,box-shadow .3s ease}
+.socials svg{position:relative;z-index:1;width:24px;height:24px}
+.socials .filled{position:absolute;inset:0;transform:scaleY(0);transform-origin:50% 100%;transition:transform .3s ease-in-out}
+.socials .tip{position:absolute;left:50%;bottom:calc(100% + 8px);padding:6px 10px;border-radius:6px;color:#fff;font-size:.82rem;white-space:nowrap;pointer-events:none;opacity:0;visibility:hidden;transform:translate(-50%,8px);transition:opacity .3s ease,transform .3s ease,visibility .3s}
+.socials li:hover .tip,.socials li:focus-within .tip{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.socials li:hover a,.socials a:focus-visible{color:#fff;box-shadow:3px 2px 45px 0 rgba(0,0,0,.12)}
+.socials li:hover .filled,.socials a:focus-visible .filled{transform:scaleY(1)}
+.socials a:focus-visible{outline:3px solid var(--pale);outline-offset:3px}
+.socials a[data-social="instagram"] .filled,.socials a[data-social="instagram"]~.tip{background:linear-gradient(45deg,#405de6,#5b51db,#b33ab4,#c135b4,#e1306c,#fd1f1f)}
+.socials a[data-social="youtube"] .filled,.socials a[data-social="youtube"]~.tip{background:#ff0000}
+.socials a[data-social="github"] .filled,.socials a[data-social="github"]~.tip{background:#24262a}
+.socials a[data-social="whatsapp"] .filled,.socials a[data-social="whatsapp"]~.tip{background:#25d366}
+@media (prefers-reduced-motion:reduce){.tile.is-in .kb,.tile.is-in .tile-pill i{animation:none}.tile-pill i{transform:none}.socials .filled,.socials .tip{transition:none}}
 footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 .fab{position:fixed;right:18px;bottom:18px;z-index:30;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;background:var(--wa);color:var(--wa-ink);transition:transform .16s var(--ease)}
 .fab:active{transform:scale(.94)}

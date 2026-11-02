@@ -5,8 +5,8 @@
 // para baixo, enquanto ela abre. Por isso a tela só acende quando está virada para quem olha.
 import {
   ACESFilmicToneMapping, BackSide, BoxGeometry, CanvasTexture, CircleGeometry, Color, DoubleSide, ExtrudeGeometry, Group, InstancedMesh,
-  Mesh, MeshBasicMaterial, MeshPhysicalMaterial, MeshStandardMaterial, Object3D, PerspectiveCamera, PlaneGeometry, PMREMGenerator, Raycaster, RawShaderMaterial,
-  Scene, Shape, ShapeGeometry, SRGBColorSpace, TextureLoader, Vector2, Vector3, WebGLRenderer,
+  Mesh, MeshBasicMaterial, MeshPhysicalMaterial, MeshStandardMaterial, Object3D, OrthographicCamera, PerspectiveCamera, PlaneGeometry, PMREMGenerator, Raycaster,
+  RawShaderMaterial, Scene, Shape, ShapeGeometry, SRGBColorSpace, TextureLoader, Vector2, Vector3, WebGLRenderer, WebGLRenderTarget,
 } from "three";
 import { RoundedBoxGeometry } from "three/examples/jsm/geometries/RoundedBoxGeometry.js";
 import { CSS3DObject, CSS3DRenderer } from "three/examples/jsm/renderers/CSS3DRenderer.js";
@@ -227,7 +227,7 @@ export function mountNotebook({ stage, screenEl, lenis, gsap, ScrollTrigger }) {
   const cssHost = stage.querySelector(".nb-css");
 
   const renderer = new WebGLRenderer({ canvas, antialias: true, powerPreference: "high-performance" });
-  renderer.setPixelRatio(Math.min(2, devicePixelRatio));
+  renderer.setPixelRatio(Math.min(1.5, devicePixelRatio)); // a tela do programa é HTML e fica nítida de qualquer jeito
   renderer.toneMapping = ACESFilmicToneMapping;
   renderer.outputColorSpace = SRGBColorSpace;
 
@@ -236,15 +236,32 @@ export function mountNotebook({ stage, screenEl, lenis, gsap, ScrollTrigger }) {
   scene.environmentIntensity = 1.3;
   const camera = new PerspectiveCamera(34, 1, 0.1, 60);
 
-  // Fundo em GLSL, desenhado antes de tudo e fora da câmera.
+  // Fundo em GLSL. A névoa é macia, então é calculada em 1/3 da resolução e esticada: o mesmo desenho com uma
+  // fração do trabalho da placa de vídeo (calcular a tela cheia a cada quadro travava a rolagem em PC mais fraco).
+  const FULL = "attribute vec3 position;attribute vec2 uv;varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,1.,1.);}";
   const backdrop = new RawShaderMaterial({
-    vertexShader: "attribute vec3 position;attribute vec2 uv;varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,1.,1.);}",
+    vertexShader: FULL,
     fragmentShader: BACKDROP,
     uniforms: { uTime: { value: 0 }, uRes: { value: new Vector2(1, 1) }, uOpen: { value: 0 } },
     depthTest: false,
     depthWrite: false,
   });
-  const bgMesh = new Mesh(new PlaneGeometry(2, 2), backdrop);
+  const bgTarget = new WebGLRenderTarget(1, 1, { depthBuffer: false });
+  const bgScene = new Scene();
+  const bgCam = new OrthographicCamera(-1, 1, 1, -1, 0, 1);
+  const bgQuad = new Mesh(new PlaneGeometry(2, 2), backdrop);
+  bgQuad.frustumCulled = false;
+  bgScene.add(bgQuad);
+  const bgMesh = new Mesh(
+    new PlaneGeometry(2, 2),
+    new RawShaderMaterial({
+      vertexShader: FULL,
+      fragmentShader: "precision mediump float;uniform sampler2D map;varying vec2 vUv;void main(){gl_FragColor=texture2D(map,vUv);}",
+      uniforms: { map: { value: bgTarget.texture } },
+      depthTest: false,
+      depthWrite: false,
+    }),
+  );
   bgMesh.frustumCulled = false;
   bgMesh.renderOrder = -10;
   scene.add(bgMesh);
@@ -343,6 +360,7 @@ export function mountNotebook({ stage, screenEl, lenis, gsap, ScrollTrigger }) {
   const look = new Vector3();
 
   const navH = () => stage.querySelector(".nb-nav").offsetHeight;
+  let redraw = true; // pede um quadro novo (mudou o tamanho da janela ou o notebook voltou a aparecer)
 
   function layout() {
     const w = pin.clientWidth;
@@ -352,6 +370,8 @@ export function mountNotebook({ stage, screenEl, lenis, gsap, ScrollTrigger }) {
     camera.aspect = w / h;
     camera.updateProjectionMatrix();
     backdrop.uniforms.uRes.value.set(w, h);
+    bgTarget.setSize(Math.max(1, Math.ceil(w / 3)), Math.max(1, Math.ceil(h / 3)));
+    redraw = true;
     const tan = Math.tan((camera.fov * Math.PI) / 360);
     // Fechado: pequeno, na metade de baixo, abaixo do título.
     const far = Math.max(7.4, (WIDTH * 1.5) / (2 * tan * camera.aspect));
@@ -398,6 +418,9 @@ export function mountNotebook({ stage, screenEl, lenis, gsap, ScrollTrigger }) {
     screenEl.toggleAttribute("inert", on < 0.9);
     backdrop.uniforms.uTime.value = time;
     backdrop.uniforms.uOpen.value = on;
+    renderer.setRenderTarget(bgTarget);
+    renderer.render(bgScene, bgCam);
+    renderer.setRenderTarget(null);
     renderer.render(scene, camera);
     cssRenderer.render(cssScene, camera);
   }
@@ -406,12 +429,16 @@ export function mountNotebook({ stage, screenEl, lenis, gsap, ScrollTrigger }) {
   const copy = stage.querySelector(".nb-copy");
   const nav = stage.querySelector(".nb-nav");
   gsap.set(nav, { autoAlpha: 0, y: 18 });
-  const tl = gsap.timeline({ defaults: { ease: "none" }, scrollTrigger: { trigger: stage, start: "top top", end: "bottom bottom", scrub: 0.6, invalidateOnRefresh: true } });
-  tl.to(copy, { autoAlpha: 0, y: -40, duration: 0.14 }, 0.02)
-    .to(state, { open: 1, duration: 0.5, ease: "power2.inOut" }, 0.04)
-    .to(state, { cam: 1, duration: 0.56, ease: "power2.inOut" }, 0)
-    .to(nav, { autoAlpha: 1, y: 0, duration: 0.08 }, 0.52)
-    .to({}, { duration: 0.44 });
+  // A tampa abre em 70% da rolagem e a pausa com ela aberta é curta: antes a página ficava presa no notebook.
+  const tl = gsap.timeline({
+    defaults: { ease: "none" },
+    scrollTrigger: { trigger: stage, start: "top top", end: "bottom bottom", scrub: 0.4, invalidateOnRefresh: true, onUpdate: (st) => stage.classList.toggle("is-open", st.progress > 0.66) },
+  });
+  tl.to(copy, { autoAlpha: 0, y: -40, duration: 0.12 }, 0)
+    .to(state, { open: 1, duration: 0.62, ease: "power2.inOut" }, 0.03)
+    .to(state, { cam: 1, duration: 0.7, ease: "power2.inOut" }, 0)
+    .to(nav, { autoAlpha: 1, y: 0, duration: 0.08 }, 0.64)
+    .to({}, { duration: 0.25 });
 
   // Clicar no notebook fechado abre: rola até o ponto em que a tela está pronta.
   const ray = new Raycaster();
@@ -423,7 +450,7 @@ export function mountNotebook({ stage, screenEl, lenis, gsap, ScrollTrigger }) {
     return ray.intersectObjects([base, lid], false).length > 0;
   }
   function openNow() {
-    const y = tl.scrollTrigger.start + (tl.scrollTrigger.end - tl.scrollTrigger.start) * 0.62;
+    const y = tl.scrollTrigger.start + (tl.scrollTrigger.end - tl.scrollTrigger.start) * 0.78;
     if (lenis) lenis.scrollTo(y, { duration: 1.5 });
     else scrollTo({ top: y, behavior: "smooth" });
   }
@@ -436,11 +463,22 @@ export function mountNotebook({ stage, screenEl, lenis, gsap, ScrollTrigger }) {
   });
   stage.querySelector(".nb-open")?.addEventListener("click", openNow);
 
-  // Só desenha com o notebook na tela.
+  // Só desenha com o notebook na tela. Parado, a névoa do fundo anda devagar e basta redesenhar 1 quadro em 3.
   let visible = true;
-  new IntersectionObserver(([en]) => (visible = en.isIntersecting), { rootMargin: "10% 0px" }).observe(pin);
+  let frame = 0;
+  let lastKey = "";
+  new IntersectionObserver(([en]) => {
+    visible = en.isIntersecting;
+    redraw = true;
+  }, { rootMargin: "10% 0px" }).observe(pin);
   gsap.ticker.add((time) => {
-    if (visible && !document.hidden) draw(time);
+    if (!visible || document.hidden) return;
+    frame++;
+    const key = `${state.open.toFixed(4)}|${state.cam.toFixed(4)}`;
+    if (key === lastKey && !redraw && frame % 3) return;
+    lastKey = key;
+    redraw = false;
+    draw(time);
   });
   draw(0);
   stage.classList.add("is-3d");
