@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "esbuild main.js --bundle --splitting --format=esm --minify --target=es2020 --chunk-names=[name]-[hash] --outdir=../docs/js --legal-comments=none"
+    "build": "esbuild main.js --bundle --splitting --format=esm --minify --target=es2020 --chunk-names=[name]-[hash] --outdir=../docs/js --legal-comments=none && node stamp.mjs"
   },
   "dependencies": {
     "gsap": "3.15.0",
