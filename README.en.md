@@ -12,7 +12,7 @@
 
 [⬇️ Download the full kit](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Kit.zip) ·
 [💾 Program only](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Portatil.exe) ·
-[🌐 Visit the website](https://meowdev-mod.github.io/Iron-Check/en/) ·
+[🌐 Visit the website](https://techmeow.app/Iron-Check/en/) ·
 [💬 Ask for a trial key](https://wa.me/5521966547296?text=Hi!%20I%27d%20like%20a%20trial%20key%20for%20Iron%20Check.)
 
 </div>

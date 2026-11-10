@@ -12,7 +12,7 @@
 
 [⬇️ Baixar o kit completo](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Kit.zip) ·
 [💾 Só o programa](https://github.com/MeoWDev-MOD/Iron-Check/releases/latest/download/Iron-Check-Portatil.exe) ·
-[🌐 Ver o site](https://meowdev-mod.github.io/Iron-Check/) ·
+[🌐 Ver o site](https://techmeow.app/Iron-Check/) ·
 [💬 Pedir chave de teste](https://wa.me/5521966547296?text=Ol%C3%A1!%20Quero%20uma%20chave%20de%20teste%20do%20Iron%20Check.)
 
 </div>
