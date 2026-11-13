@@ -1,0 +1,61 @@
+{
+  "base": "https://techmeow.app/Iron-Check/",
+  "docs": "docs",
+  "raiz": "/Iron-Check/",
+  "paginas": [
+    "index.html"
+  ],
+  "idiomas": [
+    "en",
+    "es",
+    "ru"
+  ],
+  "origem": "pt-BR",
+  "chave_idioma": "techmeow.lang",
+  "outros_traduzidos": [
+    "/ps5-hdmi-tool/",
+    "/Control-PS-5/",
+    "/ps5-controle-test/",
+    "/Iron-Check/",
+    "/BancadaSync-Download/"
+  ],
+  "paginas_exatas": [
+    "/",
+    "/projetos/",
+    "/app/",
+    "/app/acesso/",
+    "/privacidade/",
+    "/JNX/",
+    "/MeoWGuard/"
+  ],
+  "sitemap": [
+    "index.html"
+  ],
+  "imagens": {
+    "img/app/pt/sistema.webp": {
+      "en": "img/app/en/sistema.webp",
+      "es": "img/app/en/sistema.webp",
+      "ru": "img/app/en/sistema.webp"
+    },
+    "img/app/pt/drivers.webp": {
+      "en": "img/app/en/drivers.webp",
+      "es": "img/app/en/drivers.webp",
+      "ru": "img/app/en/drivers.webp"
+    },
+    "img/app/pt/memorymeow.webp": {
+      "en": "img/app/en/memorymeow.webp",
+      "es": "img/app/en/memorymeow.webp",
+      "ru": "img/app/en/memorymeow.webp"
+    },
+    "img/app/pt/situacao.webp": {
+      "en": "img/app/en/situacao.webp",
+      "es": "img/app/en/situacao.webp",
+      "ru": "img/app/en/situacao.webp"
+    },
+    "img/app/pt/teclado.webp": {
+      "en": "img/app/en/teclado.webp",
+      "es": "img/app/en/teclado.webp",
+      "ru": "img/app/en/teclado.webp"
+    }
+  }
+}

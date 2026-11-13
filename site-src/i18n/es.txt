@@ -1,0 +1,251 @@
+# Traduções do Iron Check (es). Cada "@@ chave" vem de textos-pt.json (rode traduzir.py extrair).
+@@ 383455b0fc
+Iron Check — pruebas, drivers e informe en PDF para servicios técnicos
+@@ b1be1b570c
+Programa portátil, en portugués e inglés, para servicios técnicos: prueba la computadora entera, instala el driver de red sin internet y emite un informe en PDF con la orden de servicio del cliente. Pide una clave de prueba.
+@@ 95b6f44da1
+Iron Check — entrega cada equipo con informe, no con promesas
+@@ f3b24b635d
+Prueba la computadora entera, instala el driver de red sin internet y emite un informe en PDF con la orden de servicio. Programa portátil para servicios técnicos.
+@@ fd045e46a8
+<b>IRON</b> CHECK
+@@ fb7f240fb3
+Funciones
+@@ d76a2844ba
+Informe
+@@ b7f79fe1ef
+Pantallas
+@@ a3a7b250b2
+Cómo funciona
+@@ f4c0260715
+Preguntas
+@@ 5bb1416f84
+Cambiar a inglés
+@@ eeb3b86cac
+Português · English
+@@ ea9b59355c
+Pedir clave de prueba
+@@ bf1ffcb4d3
+Clave de prueba
+@@ 50097e26cc
+Entrega con informe, no con promesas.
+@@ d80ef59367
+Iron Check prueba la computadora entera, instala el driver que falta (el de la placa de red funciona incluso sin internet) y emite un <b>informe en PDF con la orden de servicio</b> de tu cliente. En portugués o en inglés, con un clic, en un programa que corre desde el pendrive.
+@@ 71ccc0b07c
+Abrir la notebook
+@@ b1b78dc50d
+<svg aria-hidden="true"><use href="#i-wa"/></svg> Pedir clave de prueba por WhatsApp
+@@ ac12d490de
+<svg aria-hidden="true"><use href="#i-down"/></svg> Descargar el programa
+@@ ed8ebf2d2c
+Windows 10 u 11 (64 bits) · corre desde el pendrive, sin instalar · la clave de prueba libera el programa completo por unos días
+@@ 05f938f8c3
+Por dentro
+@@ 6e33600bf8
+Haz clic en el menú de la pantalla: es el menú real del programa, sobre fotos de las pantallas de verdad. Las banderas cambian el idioma y, en Benchmark, cada prueba muestra su animación.
+@@ deaa81369a
+Números del programa
+@@ f13066e7d8
+pruebas y herramientas
+@@ 623c664fcd
+placas de red con driver sin internet
+@@ 7fcaabaccb
+categorías de hardware leídas
+@@ 5517f3c55b
+PT + EN
+@@ 13bd288b1e
+cambio de idioma en 1 clic
+@@ 7ea0a51900
+Píxel apagado
+@@ 127790c6b4
+Ningún píxel muerto pasa desapercibido
+@@ 5b9bc6ebb2
+Iron Check llena la pantalla de color, uno a la vez. Manchas, fugas de luz y píxeles apagados aparecen al instante, antes de que el equipo vuelva al cliente.
+@@ e579205266
+Color de la prueba de pantalla
+@@ a08bef61db
+<i style="background:rgb(255,255,255)"></i>Blanco
+@@ c085dcd8c2
+<i style="background:rgb(255,0,0)"></i>Rojo
+@@ cfd84aa3ce
+<i style="background:rgb(0,255,0)"></i>Verde
+@@ 059bfa0502
+<i style="background:rgb(0,0,255)"></i>Azul
+@@ 8ea6a5865a
+<i style="background:rgb(0,0,0)"></i>Negro
+@@ 88429c0a66
+Panel de ejemplo, hecho en esta página. Pasa el mouse (o el dedo) para encender los píxeles y encuentra el que no enciende. En negro, el defecto es el píxel que no se apaga.
+@@ cb3713321f
+Lo que resuelve en el taller
+@@ 17fbe99167
+Un programa en el pendrive, del mostrador a la entrega.
+@@ 78e54dc11f
+Pruebas automáticas de Iron Check, cada una con su veredicto
+@@ 40f841e4dd
+Prueba el equipo entero
+@@ 05809f3eb0
+Sistema, batería, disco, memoria, procesador, Wi-Fi y Bluetooth en secuencia, cada uno con su veredicto.
+@@ b7a2bcb7f9
+Pestaña Drivers de Iron Check
+@@ 389f9171cd
+<i></i>Instalando el driver de red, sin internet
+@@ 81f41febca
+Driver de red sin internet
+@@ 69fe5897dc
+¿Formateaste y te quedaste sin red? El driver de más de 400 placas va junto en el pendrive.
+@@ e32df64b18
+Animación de la prueba de placa de video de Iron Check
+@@ 19e1a82b8e
+Muestra si aguanta la carga
+@@ e83e68d7a9
+Prueba de estrés y 7 benchmarks con puntaje, para comparar antes y después de la reparación.
+@@ fc24d0d298
+Animación de la prueba de disco de Iron Check
+@@ 0c55501de5
+Encuentra el disco que va a fallar
+@@ a9ed6bc98a
+SMART, escaneo de solo lectura y rendimiento, en HD, SSD SATA y NVMe.
+@@ bef517a283
+Prueba de teclado de Iron Check, con las teclas presionadas encendidas
+@@ 73620d062f
+Verifica cada pieza cambiada
+@@ a80119223e
+Pantalla, teclado, touchpad, puertos USB, cámara web, altavoces y micrófono.
+@@ fefafbd68c
+Memory MeoW, la prueba de memoria de video de Iron Check
+@@ 00931785c5
+Memoria de video a fondo
+@@ 9fd31cf088
+Memory MeoW escribe y verifica la memoria de la placa de video en 12 patrones y señala la causa probable.
+@@ 8d7a9bf946
+Primera página de un informe técnico en PDF de Iron Check, con la tienda, el número de orden, el resultado general y la lista de pruebas
+@@ 16dca2f941
+Verificado
+@@ 967362aab8
+Ejemplo de informe generado por el programa. Los identificadores del equipo fueron ocultados.
+@@ 5036c40568
+El informe que genera confianza
+@@ 9c85460b92
+PDF con tu tienda, la orden de servicio y el resultado de cada prueba. Si el equipo vuelve, muestras cómo salió.
+@@ 7be9012f40
+Listo en un minuto: el hardware se lee solo
+@@ 5fb689f932
+Código único que muestra si el PDF fue alterado
+@@ 8a0eace4ba
+En portugués o en inglés
+@@ 21acef1b38
+<svg aria-hidden="true"><use href="#i-wa"/></svg> Quiero probar el informe
+@@ e3b4f3d94c
+Equipo del cliente, sin sustos
+@@ a204ef0184
+Disco solo lectura
+@@ 378184a280
+Ninguna prueba escribe en el disco del cliente.
+@@ 800856406f
+Boot solo en pendrive
+@@ 525ca769ea
+Nunca toca el disco del sistema.
+@@ 00aee35a00
+Solo fuentes oficiales
+@@ 97f1f32052
+Drivers de los fabricantes; el de video, de NVIDIA.
+@@ 346b936898
+Nada se borra
+@@ c5bb0a6fd1
+Sin licencia, el programa solo se bloquea.
+@@ f2599ce273
+Del pedido al informe en minutos
+@@ aa215dc716
+Pide la clave
+@@ 812b6fa3a3
+Por WhatsApp. La de prueba vale por unos días.
+@@ 00f5b59313
+Llévalo en el pendrive
+@@ 10f9520143
+Descarga el kit, extráelo y ábrelo. Sin instalar.
+@@ 4980ace45a
+Prueba y entrega el informe
+@@ 1d01204f8e
+Pruebas automáticas y manuales, y el PDF de la orden.
+@@ 3939b26d2d
+Prueba gratis, suscríbete después
+@@ 43cb061ea6
+La clave de prueba libera el programa completo por unos días. Después, suscripción mensual por Pix (pago instantáneo de Brasil), con una clave para todas tus computadoras.
+@@ 044146a280
+<svg aria-hidden="true"><use href="#i-wa"/></svg> Pedir clave de prueba
+@@ cc47f4f0d6
+Preguntar el precio
+@@ 97a59a0c7f
+Descargar el kit completo
+@@ 8f44b2e79b
+Programa y drivers de red para instalar sin internet · 353 MB
+@@ cf296c4941
+Descargar solo el programa
+@@ 450546f475
+Iron-Check-Portatil.exe · 92 MB
+@@ a0018fe7a0
+Windows 10 u 11, 64 bits. Extrae el kit y lleva la carpeta entera al pendrive. · <a href="https://github.com/MeoWDev-MOD/Iron-Check/releases" target="_blank" rel="noopener">Todas las versiones</a>
+@@ 7231a3bb43
+Preguntas frecuentes
+@@ e6ec50f834
+Ya uso programas gratuitos. ¿Por qué cambiar?
+@@ 70fd0bad16
+Los gratuitos son excelentes, cada uno en una cosa, y puedes seguir con ellos. Iron Check junta lo que usas en el mostrador en un solo lugar, en portugués o en inglés, y hace lo que ellos no hacen: prueba puertos USB, cámara web, micrófono y altavoces, instala el driver de red sin internet y emite un informe en PDF con la orden de servicio y la verificación de autenticidad del archivo.
+@@ 8c996f0f3b
+¿Cómo funcionan la prueba y la suscripción?
+@@ d5a0c2625c
+Pide la clave de prueba por WhatsApp: vale por unos días y libera el programa completo. Para suscribirte, pagas la mensualidad por Pix (pago instantáneo de Brasil), envías el comprobante y recibes tu clave, que sirve en varias computadoras. Para saber el precio, solo pregunta por WhatsApp.
+@@ b17dd8aa02
+¿Qué descargo: el programa o el kit?
+@@ f54491af35
+El programa (<b>Iron-Check-Portatil.exe</b>, 92 MB) ya abre solo. El <b>kit completo</b> trae también la carpeta <b>drivers</b>, con la biblioteca de drivers de red que el programa usa para instalar sin internet. Extrae el kit y deja la carpeta <b>drivers</b> al lado del .exe.
+@@ d373c75c43
+¿Necesito instalarlo?
+@@ a0dd6c1638
+No. Abres el archivo desde cualquier carpeta o desde el pendrive. La primera vez prepara sus archivos en una carpeta al lado; después abre rápido. La clave y la configuración quedan en esa carpeta, no en la computadora del cliente.
+@@ 0b66560b0a
+¿Va a borrar algo del equipo del cliente?
+@@ c56a3ca275
+Las pruebas no. El escaneo del disco solo lee, la prueba de rendimiento usa un archivo temporal que se borra al final, y el Creador de Boot solo toca pendrives USB (y avisa que borra el pendrive). Las pocas herramientas que cambian Windows piden confirmación y guardan el valor original o una copia.
+@@ eab1cc566c
+¿Por qué Windows avisa sobre un “editor desconocido”?
+@@ 1521882309
+Es el aviso normal de SmartScreen para programas nuevos: haz clic en <b>Más información</b> y luego en <b>Ejecutar de todas formas</b>. El pedido de administrador también es normal: Windows exige ese permiso para leer la salud de los discos y la temperatura y para instalar drivers.
+@@ 575f36f4f8
+¿Y si se cae internet?
+@@ d8b3300ce0
+El programa sigue funcionando hasta 24 horas con la última confirmación. Pasado ese plazo sin poder verificar, queda bloqueado hasta que la licencia se confirme. Tus archivos nunca se borran.
+@@ 9e4e9a0b9a
+¿Puedo compartir mi clave?
+@@ b05312be92
+Es para uso de tu servicio técnico. El servidor registra las computadoras y la ubicación aproximada de cada uso, y el uso por muchas personas se detecta: la clave puede bloquearse.
+@@ 672b26d6fc
+¿En qué computadoras funciona?
+@@ 0aa312c219
+Windows 10 u 11, de 64 bits, en notebook o PC de escritorio. Batería, touchpad y cargador solo tienen sentido en notebook. Las pruebas funcionan con cualquier placa de video; overclock, lectura detallada e instalación del driver de video son para NVIDIA GeForce.
+@@ eb69423fc8
+Úsalo en tu próximo equipo
+@@ 3722bcfa97
+Habla directo con el desarrollador, pide la clave y empieza hoy.
+@@ 8b8fbf91c3
+<svg aria-hidden="true"><use href="#i-wa"/></svg> Hablar por WhatsApp · +55 21 96654-7296
+@@ 433fda1552
+Redes sociales
+@@ 5442e2b64f
+GitHub
+@@ b336fc5587
+WhatsApp
+@@ 93b92d827b
+Developed By <b>MeoWDev MOD</b> · <a href="https://www.instagram.com/honorio.dev/" target="_blank" rel="noopener">@honorio.dev</a>
+@@ b7e666cbce
+<a href="https://github.com/MeoWDev-MOD/Iron-Check/releases" target="_blank" rel="noopener">Versiones</a> · Windows 10/11 (64 bits)
+@@ ffd2b1db63
+Hablar por WhatsApp
+@@ 6ab890d00d
+¡Hola! Quiero una clave de prueba de Iron Check.
+@@ 130ecfc260
+¡Hola! Quiero saber el precio de la suscripción de Iron Check.
+@@ db1574bbf1
+¡Hola! Quiero hablar sobre Iron Check.
+@@ 6c91c84416
+¡Hola! Quiero probar Iron Check.

@@ -325,7 +325,7 @@ export function mountNotebook({ stage, screenEl, lenis, gsap, ScrollTrigger }) {
   glint.position.set(0.003, notchY + 0.003, FRONT + 0.0025);
   hinge.add(glint);
 
-  const logoBase = document.documentElement.lang.startsWith("en") ? "../" : "";
+  const logoBase = (document.documentElement.lang || "pt").startsWith("pt") ? "" : "../"; // páginas en/, es/ e ru/ ficam numa pasta abaixo
   const logoTex = new TextureLoader().load(`${logoBase}img/logo.png`);
   logoTex.colorSpace = SRGBColorSpace;
   const logo = new Mesh(new PlaneGeometry(0.7, 0.7), new MeshBasicMaterial({ map: logoTex, transparent: true, depthWrite: false }));

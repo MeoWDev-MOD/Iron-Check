@@ -31,8 +31,11 @@ gsap.registerPlugin(ScrollTrigger);
   });
 }
 
-const lang = document.documentElement.lang.startsWith("en") ? "en" : "pt";
-const base = lang === "en" ? "../" : "";
+// Idioma da página (pt, en, es ou ru, de site-src/i18n). O programa só tem português e inglês: nas outras
+// línguas a cena e as telas ficam em inglês. Páginas traduzidas moram numa pasta abaixo (en/, es/, ru/).
+const pageLang = (document.documentElement.lang || "pt").slice(0, 2);
+const lang = pageLang === "pt" ? "pt" : "en";
+const base = pageLang === "pt" ? "" : "../";
 const still = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const byId = Object.fromEntries(PAGES.map((p) => [p.id, p]));
 const benchById = Object.fromEntries(BENCH.map((b) => [b.id, b]));

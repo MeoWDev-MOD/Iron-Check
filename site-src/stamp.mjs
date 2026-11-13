@@ -9,7 +9,7 @@ const version = (file) => createHash("sha256").update(readFileSync(new URL(file,
 const css = version("site.css");
 const js = version("js/main.js");
 
-for (const page of ["index.html", "en/index.html"]) {
+for (const page of ["index.html", "en/index.html", "es/index.html", "ru/index.html"]) {
   const file = new URL(page, docs);
   const before = readFileSync(file, "utf8");
   const after = before

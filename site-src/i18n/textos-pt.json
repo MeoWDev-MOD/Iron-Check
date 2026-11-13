@@ -1,0 +1,627 @@
+[
+ {
+  "k": "383455b0fc",
+  "pagina": "index.html",
+  "pt": "Iron Check — testes, drivers e laudo em PDF para assistência técnica"
+ },
+ {
+  "k": "b1be1b570c",
+  "pagina": "index.html",
+  "pt": "Programa portátil, em português e inglês, para assistências técnicas: testa o computador inteiro, instala o driver da rede sem internet e emite laudo em PDF com a OS do cliente. Peça uma chave de teste."
+ },
+ {
+  "k": "95b6f44da1",
+  "pagina": "index.html",
+  "pt": "Iron Check — entregue cada aparelho com laudo, não com promessa"
+ },
+ {
+  "k": "f3b24b635d",
+  "pagina": "index.html",
+  "pt": "Testa o computador inteiro, instala o driver da rede sem internet e emite laudo em PDF com a OS. Programa portátil para assistências técnicas."
+ },
+ {
+  "k": "fd045e46a8",
+  "pagina": "index.html",
+  "pt": "<b>IRON</b> CHECK"
+ },
+ {
+  "k": "fb7f240fb3",
+  "pagina": "index.html",
+  "pt": "Recursos"
+ },
+ {
+  "k": "d76a2844ba",
+  "pagina": "index.html",
+  "pt": "Laudo"
+ },
+ {
+  "k": "b7f79fe1ef",
+  "pagina": "index.html",
+  "pt": "Telas"
+ },
+ {
+  "k": "a3a7b250b2",
+  "pagina": "index.html",
+  "pt": "Como funciona"
+ },
+ {
+  "k": "f4c0260715",
+  "pagina": "index.html",
+  "pt": "Dúvidas"
+ },
+ {
+  "k": "ea9b59355c",
+  "pagina": "index.html",
+  "pt": "Pedir chave de teste"
+ },
+ {
+  "k": "bf1ffcb4d3",
+  "pagina": "index.html",
+  "pt": "Chave de teste"
+ },
+ {
+  "k": "50097e26cc",
+  "pagina": "index.html",
+  "pt": "Entregue com laudo, não com promessa."
+ },
+ {
+  "k": "d80ef59367",
+  "pagina": "index.html",
+  "pt": "O Iron Check testa o computador inteiro, instala o driver que falta (o da placa de rede funciona até sem internet) e emite um <b>laudo em PDF com a ordem de serviço</b> do seu cliente. Tudo em português (e em inglês, com um clique), num programa que roda do pendrive."
+ },
+ {
+  "k": "71ccc0b07c",
+  "pagina": "index.html",
+  "pt": "Abrir o notebook"
+ },
+ {
+  "k": "b1b78dc50d",
+  "pagina": "index.html",
+  "pt": "<svg aria-hidden=\"true\"><use href=\"#i-wa\"/></svg> Pedir chave de teste no WhatsApp"
+ },
+ {
+  "k": "ac12d490de",
+  "pagina": "index.html",
+  "pt": "<svg aria-hidden=\"true\"><use href=\"#i-down\"/></svg> Baixar o programa"
+ },
+ {
+  "k": "ed8ebf2d2c",
+  "pagina": "index.html",
+  "pt": "Windows 10 ou 11 (64 bits) · roda do pendrive, sem instalar · a chave de teste libera o programa completo por poucos dias"
+ },
+ {
+  "k": "05f938f8c3",
+  "pagina": "index.html",
+  "pt": "Por dentro"
+ },
+ {
+  "k": "6e33600bf8",
+  "pagina": "index.html",
+  "pt": "Clique no menu da tela: é o menu real do programa, em fotos das telas de verdade. As bandeiras trocam o idioma e, no Benchmark, cada teste mostra a sua animação."
+ },
+ {
+  "k": "deaa81369a",
+  "pagina": "index.html",
+  "pt": "Números do programa"
+ },
+ {
+  "k": "f13066e7d8",
+  "pagina": "index.html",
+  "pt": "testes e ferramentas"
+ },
+ {
+  "k": "623c664fcd",
+  "pagina": "index.html",
+  "pt": "placas de rede com driver offline"
+ },
+ {
+  "k": "7fcaabaccb",
+  "pagina": "index.html",
+  "pt": "categorias de hardware lidas"
+ },
+ {
+  "k": "5517f3c55b",
+  "pagina": "index.html",
+  "pt": "PT + EN"
+ },
+ {
+  "k": "13bd288b1e",
+  "pagina": "index.html",
+  "pt": "troca de idioma em 1 clique"
+ },
+ {
+  "k": "7ea0a51900",
+  "pagina": "index.html",
+  "pt": "Pixel apagado"
+ },
+ {
+  "k": "127790c6b4",
+  "pagina": "index.html",
+  "pt": "Pixel morto não passa batido"
+ },
+ {
+  "k": "5b9bc6ebb2",
+  "pagina": "index.html",
+  "pt": "O Iron Check enche a tela de cor, uma de cada vez. Mancha, vazamento de luz e pixel apagado aparecem na hora, antes de o aparelho voltar para o cliente."
+ },
+ {
+  "k": "e579205266",
+  "pagina": "index.html",
+  "pt": "Cor do teste de tela"
+ },
+ {
+  "k": "a08bef61db",
+  "pagina": "index.html",
+  "pt": "<i style=\"background:rgb(255,255,255)\"></i>Branco"
+ },
+ {
+  "k": "c085dcd8c2",
+  "pagina": "index.html",
+  "pt": "<i style=\"background:rgb(255,0,0)\"></i>Vermelho"
+ },
+ {
+  "k": "cfd84aa3ce",
+  "pagina": "index.html",
+  "pt": "<i style=\"background:rgb(0,255,0)\"></i>Verde"
+ },
+ {
+  "k": "059bfa0502",
+  "pagina": "index.html",
+  "pt": "<i style=\"background:rgb(0,0,255)\"></i>Azul"
+ },
+ {
+  "k": "8ea6a5865a",
+  "pagina": "index.html",
+  "pt": "<i style=\"background:rgb(0,0,0)\"></i>Preto"
+ },
+ {
+  "k": "88429c0a66",
+  "pagina": "index.html",
+  "pt": "Painel de exemplo, feito nesta página. Passe o mouse (ou o dedo) para acender os pixels e ache o que não acende. No preto, o defeito é o pixel que não apaga."
+ },
+ {
+  "k": "cb3713321f",
+  "pagina": "index.html",
+  "pt": "O que ele resolve na bancada"
+ },
+ {
+  "k": "17fbe99167",
+  "pagina": "index.html",
+  "pt": "Um programa no pendrive, do balcão à entrega."
+ },
+ {
+  "k": "78e54dc11f",
+  "pagina": "index.html",
+  "pt": "Testes automáticos do Iron Check, cada um com o seu veredito"
+ },
+ {
+  "k": "40f841e4dd",
+  "pagina": "index.html",
+  "pt": "Testa o aparelho inteiro"
+ },
+ {
+  "k": "05809f3eb0",
+  "pagina": "index.html",
+  "pt": "Sistema, bateria, disco, memória, processador, Wi-Fi e Bluetooth em sequência, cada um com o seu veredito."
+ },
+ {
+  "k": "b7a2bcb7f9",
+  "pagina": "index.html",
+  "pt": "Aba Drivers do Iron Check"
+ },
+ {
+  "k": "389f9171cd",
+  "pagina": "index.html",
+  "pt": "<i></i>Instalando o driver de rede, sem internet"
+ },
+ {
+  "k": "81f41febca",
+  "pagina": "index.html",
+  "pt": "Driver de rede sem internet"
+ },
+ {
+  "k": "69fe5897dc",
+  "pagina": "index.html",
+  "pt": "Formatou e ficou sem rede? O driver de mais de 400 placas vai junto no pendrive."
+ },
+ {
+  "k": "e32df64b18",
+  "pagina": "index.html",
+  "pt": "Animação do teste de placa de vídeo do Iron Check"
+ },
+ {
+  "k": "19e1a82b8e",
+  "pagina": "index.html",
+  "pt": "Mostra se aguenta carga"
+ },
+ {
+  "k": "e83e68d7a9",
+  "pagina": "index.html",
+  "pt": "Stress test e 7 benchmarks com nota, para comparar antes e depois do conserto."
+ },
+ {
+  "k": "fc24d0d298",
+  "pagina": "index.html",
+  "pt": "Animação do teste de disco do Iron Check"
+ },
+ {
+  "k": "0c55501de5",
+  "pagina": "index.html",
+  "pt": "Acha o disco que vai falhar"
+ },
+ {
+  "k": "a9ed6bc98a",
+  "pagina": "index.html",
+  "pt": "SMART, varredura só de leitura e desempenho, em HD, SSD SATA e NVMe."
+ },
+ {
+  "k": "bef517a283",
+  "pagina": "index.html",
+  "pt": "Teste de teclado do Iron Check, com as teclas apertadas acesas"
+ },
+ {
+  "k": "73620d062f",
+  "pagina": "index.html",
+  "pt": "Confere cada peça trocada"
+ },
+ {
+  "k": "a80119223e",
+  "pagina": "index.html",
+  "pt": "Tela, teclado, touchpad, portas USB, webcam, alto-falantes e microfone."
+ },
+ {
+  "k": "fefafbd68c",
+  "pagina": "index.html",
+  "pt": "Memory MeoW, o teste de memória de vídeo do Iron Check"
+ },
+ {
+  "k": "00931785c5",
+  "pagina": "index.html",
+  "pt": "Memória de vídeo a fundo"
+ },
+ {
+  "k": "9fd31cf088",
+  "pagina": "index.html",
+  "pt": "O Memory MeoW grava e confere a memória da placa de vídeo em 12 padrões e aponta a causa provável."
+ },
+ {
+  "k": "8d7a9bf946",
+  "pagina": "index.html",
+  "pt": "Primeira página de um laudo técnico em PDF do Iron Check, com loja, número da OS, resultado geral e a lista de testes"
+ },
+ {
+  "k": "16dca2f941",
+  "pagina": "index.html",
+  "pt": "Conferido"
+ },
+ {
+  "k": "967362aab8",
+  "pagina": "index.html",
+  "pt": "Exemplo de laudo gerado pelo programa. Os identificadores do aparelho foram ocultados."
+ },
+ {
+  "k": "5036c40568",
+  "pagina": "index.html",
+  "pt": "O laudo que gera confiança"
+ },
+ {
+  "k": "9c85460b92",
+  "pagina": "index.html",
+  "pt": "PDF com a sua loja, a OS e o resultado de cada teste. Se o aparelho volta, você mostra como ele saiu."
+ },
+ {
+  "k": "7be9012f40",
+  "pagina": "index.html",
+  "pt": "Pronto em um minuto: o hardware é lido sozinho"
+ },
+ {
+  "k": "5fb689f932",
+  "pagina": "index.html",
+  "pt": "Código único que mostra se o PDF foi alterado"
+ },
+ {
+  "k": "8a0eace4ba",
+  "pagina": "index.html",
+  "pt": "Em português ou em inglês"
+ },
+ {
+  "k": "21acef1b38",
+  "pagina": "index.html",
+  "pt": "<svg aria-hidden=\"true\"><use href=\"#i-wa\"/></svg> Quero testar o laudo"
+ },
+ {
+  "k": "e3b4f3d94c",
+  "pagina": "index.html",
+  "pt": "Aparelho de cliente, sem susto"
+ },
+ {
+  "k": "a204ef0184",
+  "pagina": "index.html",
+  "pt": "Disco só leitura"
+ },
+ {
+  "k": "378184a280",
+  "pagina": "index.html",
+  "pt": "Nenhum teste grava no disco do cliente."
+ },
+ {
+  "k": "800856406f",
+  "pagina": "index.html",
+  "pt": "Boot só em pendrive"
+ },
+ {
+  "k": "525ca769ea",
+  "pagina": "index.html",
+  "pt": "Nunca toca no disco do sistema."
+ },
+ {
+  "k": "00aee35a00",
+  "pagina": "index.html",
+  "pt": "Só fontes oficiais"
+ },
+ {
+  "k": "97f1f32052",
+  "pagina": "index.html",
+  "pt": "Drivers dos fabricantes; o de vídeo, da NVIDIA."
+ },
+ {
+  "k": "346b936898",
+  "pagina": "index.html",
+  "pt": "Nada é apagado"
+ },
+ {
+  "k": "c5bb0a6fd1",
+  "pagina": "index.html",
+  "pt": "Sem licença, o programa só trava."
+ },
+ {
+  "k": "f2599ce273",
+  "pagina": "index.html",
+  "pt": "Do pedido ao laudo em minutos"
+ },
+ {
+  "k": "aa215dc716",
+  "pagina": "index.html",
+  "pt": "Peça a chave"
+ },
+ {
+  "k": "812b6fa3a3",
+  "pagina": "index.html",
+  "pt": "No WhatsApp. A de teste vale por alguns dias."
+ },
+ {
+  "k": "00f5b59313",
+  "pagina": "index.html",
+  "pt": "Leve no pendrive"
+ },
+ {
+  "k": "10f9520143",
+  "pagina": "index.html",
+  "pt": "Baixe o kit, extraia e abra. Sem instalar."
+ },
+ {
+  "k": "4980ace45a",
+  "pagina": "index.html",
+  "pt": "Teste e entregue o laudo"
+ },
+ {
+  "k": "1d01204f8e",
+  "pagina": "index.html",
+  "pt": "Testes automáticos e manuais, e o PDF da OS."
+ },
+ {
+  "k": "3939b26d2d",
+  "pagina": "index.html",
+  "pt": "Teste grátis, assine depois"
+ },
+ {
+  "k": "43cb061ea6",
+  "pagina": "index.html",
+  "pt": "A chave de teste libera o programa completo por alguns dias. Depois, assinatura mensal por Pix, com uma chave para todos os seus computadores."
+ },
+ {
+  "k": "044146a280",
+  "pagina": "index.html",
+  "pt": "<svg aria-hidden=\"true\"><use href=\"#i-wa\"/></svg> Pedir chave de teste"
+ },
+ {
+  "k": "cc47f4f0d6",
+  "pagina": "index.html",
+  "pt": "Perguntar o valor"
+ },
+ {
+  "k": "97a59a0c7f",
+  "pagina": "index.html",
+  "pt": "Baixar o kit completo"
+ },
+ {
+  "k": "8f44b2e79b",
+  "pagina": "index.html",
+  "pt": "Programa e drivers de rede para instalar sem internet · 353 MB"
+ },
+ {
+  "k": "cf296c4941",
+  "pagina": "index.html",
+  "pt": "Baixar só o programa"
+ },
+ {
+  "k": "450546f475",
+  "pagina": "index.html",
+  "pt": "Iron-Check-Portatil.exe · 92 MB"
+ },
+ {
+  "k": "a0018fe7a0",
+  "pagina": "index.html",
+  "pt": "Windows 10 ou 11, 64 bits. Extraia o kit e leve a pasta inteira para o pendrive. · <a href=\"https://github.com/MeoWDev-MOD/Iron-Check/releases\" target=\"_blank\" rel=\"noopener\">Todas as versões</a>"
+ },
+ {
+  "k": "7231a3bb43",
+  "pagina": "index.html",
+  "pt": "Perguntas frequentes"
+ },
+ {
+  "k": "e6ec50f834",
+  "pagina": "index.html",
+  "pt": "Já uso programas gratuitos. Por que trocar?"
+ },
+ {
+  "k": "70fd0bad16",
+  "pagina": "index.html",
+  "pt": "Os gratuitos são ótimos, cada um numa coisa, e você pode continuar com eles. O Iron Check junta o que você usa no balcão num lugar só, em português, e faz o que eles não fazem: testa portas USB, webcam, microfone e alto-falantes, instala o driver da rede sem internet e emite um laudo em PDF com a OS e a conferência de autenticidade do arquivo."
+ },
+ {
+  "k": "8c996f0f3b",
+  "pagina": "index.html",
+  "pt": "Como funciona o teste e a assinatura?"
+ },
+ {
+  "k": "d5a0c2625c",
+  "pagina": "index.html",
+  "pt": "Peça a chave de teste no WhatsApp: ela vale por poucos dias e libera o programa completo. Para assinar, você paga a mensalidade por Pix, manda o comprovante e recebe a sua chave, que serve em vários computadores. Para saber o valor, é só perguntar no WhatsApp."
+ },
+ {
+  "k": "b17dd8aa02",
+  "pagina": "index.html",
+  "pt": "O que eu baixo: o programa ou o kit?"
+ },
+ {
+  "k": "f54491af35",
+  "pagina": "index.html",
+  "pt": "O programa (<b>Iron-Check-Portatil.exe</b>, 92 MB) já abre sozinho. O <b>kit completo</b> traz também a pasta <b>drivers</b>, com a biblioteca de drivers de rede que o programa usa para instalar sem internet. Extraia o kit e deixe a pasta <b>drivers</b> ao lado do .exe."
+ },
+ {
+  "k": "d373c75c43",
+  "pagina": "index.html",
+  "pt": "Preciso instalar?"
+ },
+ {
+  "k": "a0dd6c1638",
+  "pagina": "index.html",
+  "pt": "Não. Você abre o arquivo de qualquer pasta ou do pendrive. Na primeira vez ele prepara os arquivos numa pasta ao lado dele; depois abre rápido. A chave e as configurações ficam nessa pasta, não no computador do cliente."
+ },
+ {
+  "k": "0b66560b0a",
+  "pagina": "index.html",
+  "pt": "Vai apagar alguma coisa do aparelho do cliente?"
+ },
+ {
+  "k": "c56a3ca275",
+  "pagina": "index.html",
+  "pt": "Os testes não. A varredura do disco só lê, o teste de desempenho usa um arquivo temporário que é apagado no fim, e o Criador de Boot só mexe em pendrives USB (e avisa que apaga o pendrive). As poucas ferramentas que mudam o Windows pedem confirmação e guardam o valor original ou uma cópia."
+ },
+ {
+  "k": "eab1cc566c",
+  "pagina": "index.html",
+  "pt": "Por que o Windows avisa sobre “editor desconhecido”?"
+ },
+ {
+  "k": "1521882309",
+  "pagina": "index.html",
+  "pt": "É o aviso normal de programas novos no SmartScreen: clique em <b>Mais informações</b> e depois em <b>Executar assim mesmo</b>. O pedido de administrador também é normal: o Windows exige essa permissão para ler a saúde dos discos e a temperatura e para instalar drivers."
+ },
+ {
+  "k": "575f36f4f8",
+  "pagina": "index.html",
+  "pt": "E se a internet cair?"
+ },
+ {
+  "k": "d8b3300ce0",
+  "pagina": "index.html",
+  "pt": "O programa continua funcionando por até 24 horas com a última confirmação. Passado esse prazo sem conseguir conferir, ele fica bloqueado até a licença ser confirmada. Seus arquivos nunca são apagados."
+ },
+ {
+  "k": "9e4e9a0b9a",
+  "pagina": "index.html",
+  "pt": "Posso compartilhar minha chave?"
+ },
+ {
+  "k": "b05312be92",
+  "pagina": "index.html",
+  "pt": "Ela é para uso da sua assistência. O servidor registra os computadores e o local aproximado de cada uso, e o uso por muitas pessoas é detectado: a chave pode ser bloqueada."
+ },
+ {
+  "k": "672b26d6fc",
+  "pagina": "index.html",
+  "pt": "Em quais computadores funciona?"
+ },
+ {
+  "k": "0aa312c219",
+  "pagina": "index.html",
+  "pt": "Windows 10 ou 11, de 64 bits, em notebook ou PC de mesa. Bateria, touchpad e carregador só fazem sentido em notebook. Os testes funcionam com qualquer placa de vídeo; overclock, leitura detalhada e instalação do driver de vídeo são para NVIDIA GeForce."
+ },
+ {
+  "k": "eb69423fc8",
+  "pagina": "index.html",
+  "pt": "Rode no seu próximo aparelho"
+ },
+ {
+  "k": "3722bcfa97",
+  "pagina": "index.html",
+  "pt": "Fale direto com o desenvolvedor, peça a chave e comece hoje."
+ },
+ {
+  "k": "8b8fbf91c3",
+  "pagina": "index.html",
+  "pt": "<svg aria-hidden=\"true\"><use href=\"#i-wa\"/></svg> Falar no WhatsApp · 21 96654-7296"
+ },
+ {
+  "k": "433fda1552",
+  "pagina": "index.html",
+  "pt": "Redes sociais"
+ },
+ {
+  "k": "5721bbef40",
+  "pagina": "index.html",
+  "pt": "Instagram"
+ },
+ {
+  "k": "558865a16f",
+  "pagina": "index.html",
+  "pt": "YouTube"
+ },
+ {
+  "k": "5442e2b64f",
+  "pagina": "index.html",
+  "pt": "GitHub"
+ },
+ {
+  "k": "b336fc5587",
+  "pagina": "index.html",
+  "pt": "WhatsApp"
+ },
+ {
+  "k": "93b92d827b",
+  "pagina": "index.html",
+  "pt": "Developed By <b>MeoWDev MOD</b> · <a href=\"https://www.instagram.com/honorio.dev/\" target=\"_blank\" rel=\"noopener\">@honorio.dev</a>"
+ },
+ {
+  "k": "b7e666cbce",
+  "pagina": "index.html",
+  "pt": "<a href=\"https://github.com/MeoWDev-MOD/Iron-Check/releases\" target=\"_blank\" rel=\"noopener\">Versões</a> · Windows 10/11 (64 bits)"
+ },
+ {
+  "k": "ffd2b1db63",
+  "pagina": "index.html",
+  "pt": "Falar no WhatsApp"
+ },
+ {
+  "k": "6ab890d00d",
+  "pagina": "index.html",
+  "pt": "Olá! Quero uma chave de teste do Iron Check."
+ },
+ {
+  "k": "130ecfc260",
+  "pagina": "index.html",
+  "pt": "Olá! Quero saber o valor da assinatura do Iron Check."
+ },
+ {
+  "k": "db1574bbf1",
+  "pagina": "index.html",
+  "pt": "Olá! Quero falar sobre o Iron Check."
+ },
+ {
+  "k": "6c91c84416",
+  "pagina": "index.html",
+  "pt": "Olá! Quero testar o Iron Check."
+ }
+]
